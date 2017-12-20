@@ -1,0 +1,66 @@
+---
+title: "Dimensions of Dimensions of Biodiversity (dodoB)"
+author: "A. J. Rominger"
+date: "12/13/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Grand synthesis model
+
+The continuosity model.  Pitch it as predictive of community process but also as way of confirming METE null
+
+## METE as null model
+
+How does phylo div, trait div, beta div predict deviation from METE?  More beta likely more deviation, but lower trait and phylo might imply strong constraints on system not account for by SNE.  Base it around TREE
+
+## What drives/limits diversification?
+
+Get macrosystems ideas about SDM and eco-evo.  In particular what drives diversifcation--space, environment, spp interactions?  Combine SDM with phylo for evol of niche and then look at joint demography models, and then look at gimmeSAD type thing?  Also look at community context in any projects with fossils--then we can look explicitly at past comm structure, not just model-infered sturcture
+
+## Broader impacts
+
+R package providing pipeline data management and distribution for Dimensions-like projects that link specimen with sequence with phylo with ecology with trait with environment
+
+Data training via Data Carpentry
+
+## Another take on the big picture
+
+imagine i had point data to build SDMs, genetic data for historical demography, and phylogeny, and some kind of traits.  what could i do? evaluate geo v. abio v. bio env in driving diversification
+
+- add data where needed (specifically abundance and maybe intra-species genetics)
+- integrate data (major broader impacts)
+- look at patterns (they limit hypothesis development)
+- model and RF classifier. model would be neutral, but then add environment, and then add random effects to capture idiosyncratic differences that could be linked to traits and biotic effects; correlate random effects with specific things studied by each project (e.g. networks, traits, etc)
+- special cases with time axis: hawaii and marine lakes to look at actual model-predicted dynamics that would be integrated over for present-day only data
+
+
+## Collaborators
+
+- Kay: gingers
+- Condon: tri-trophic
+- Hileman: penstemon
+- Soltis: usa china
+- Vega: corals
+- Carnaval: brazil
+- Cavender-Bares: remote sensing
+- Jiang: usa china
+- Mullen: lat gradient
+- Skogen: plant pollinator western usa
+- Ashman: strawberry
+- Cracraft: amazon
+- Dawson: marine lakes
+- Gillespie: hawaii
+- Ives: foodweb
+- Martin: elevation asia
+- Swenson: china trees
+- Kursar: inga
+- Sanders: climate
+- Young: vertebrates 
+- Davies: china
+- Schlichting: cape floristic region
+- Waller: Wisconsin
