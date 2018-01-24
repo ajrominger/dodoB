@@ -1,0 +1,50 @@
+---
+title: "Dimensions of Dimensions of Biodiversity (dodoB)"
+author: "A. J. Rominger"
+date: "01/24/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+What limits species diversity?  It's a question that's been long asked and never answered.  Likely that answer has had to wait until we could amass the kinds of multi-dimensional data that DOB projects offer.
+
+Combining all the data streams from dimensions projects is a key step toward answering the question of what limits species diversity.  But that data synthesis is no easy task.  It requires combing 
+
+1) Environmental data, often remotely sensed and Big (with a capital B)
+2) Ecological data including abundances, traits and interactions
+3) Biogeographic data including detailed georeferenced biocollections specimens 
+4) Genetic and phylogenetic data, again often Big with a capital B
+
+Creating a manageable workflow that allows researchers to link all those data types and make them more easily shareable is a worthy task by itself and will be one salient part of our broader impacts.
+
+The other exciting task is figuring out what novel questions can be addressed with these synthesized data.
+
+We propose a detailed, theory-based and reproducible analysis of what processes most limit diversity in any given region.  To ensure the generality of our approach we bring together DOB projects that span from continental to island systems, temperate to tropical, and with or without temporally explicit observations.  We propose to selectively re-sample some study areas to ensure that each project has a minimum necessary set of data on:
+
+1) relevant species/individual traits
+2) species abundance or presence/absence
+3) within and between population genetic information 
+4) detailed environmental data
+
+To make sense of these data we will build multi-dimensional theory, inspired by the successes of the neutral theory of biodiversity,  but extended to more realistically capture temporal dynamics, differences in species fitness and niches, population genetic structure, and environmental variation.  Such theory is already under construction.  Fitting this theory to complex data will be a task for machine learning and/or approximate Bayesian computing.
+
+Our modeling framework will allow us to evaluate the specific mechanistic limits to species diversity:
+
+- local persistence/demography
+- dispersal
+- speciation
+
+Those mechanisms are themselves the product of further processes and constraints:
+
+- coexistence mechanisms
+- neutral drift
+- the geographic context
+- environmental variation and gradients
+
+Interesting specific questions that can be answered with our framework include: does the rate of speciation depend more on geographic isolation or environmental variation? Does evolutionary history leave an imprint on contemporary distributions of abundance? Are systems assembled by speciation versus immigration fundamentally different?  What ecological conditions promote speciation? Are local communities in stable equilibria, transient states or completely stochastic?
+
+Our approach will identify which processes are most important in determining a given area's diversity with important consequences for how that diversity will respond to anthropogenic pressure and restoration efforts.
