@@ -2,7 +2,7 @@
 title: "Dimensions of Dimensions of Biodiversity (dodoB)"
 author: "A. J. Rominger"
 date: "01/24/2018"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -10,7 +10,22 @@ library(knitr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-What limits species diversity?  It's a question that's been long asked and never answered.  Likely that answer has had to wait until we could amass the kinds of multi-dimensional data that DOB projects offer.
+Dear Drs. Rissler and Malcombe,
+
+We would like to inquier about your interest in a project we are developing with the intention of submitting to the final Dimensions of Biodiversity call. The question of "what limits species diversity?" has long been asked and never answered.  Likely that answer has had to wait until we could amass the kinds of multi-dimensional data that DoB projects offer.  We seek to pull together several existing DoB projects to collect new data and test prevailing hypotheses about the limits to species diversity across diverse ecosystems, and through time and space.  We will also develop an open source solution to effeciently synthesize the diverse, and often Big, data produced by DoB projects.
+
+## Hypotheses, new data to collect and theory
+
+### Hypotheses
+
+### Theory
+
+### Existing data and new data
+
+## Ecoinformatics pipeline
+
+
+# Old narrative
 
 Combining all the data streams from dimensions projects is a key step toward answering the question of what limits species diversity.  But that data synthesis is no easy task.  It requires combing 
 
@@ -23,7 +38,15 @@ Creating a manageable workflow that allows researchers to link all those data ty
 
 The other exciting task is figuring out what novel questions can be addressed with these synthesized data.
 
-We propose a detailed, theory-based and reproducible analysis of what processes most limit diversity in any given region.  To ensure the generality of our approach we bring together DOB projects that span from continental to island systems, temperate to tropical, and with or without temporally explicit observations.  We propose to selectively re-sample some study areas to ensure that each project has a minimum necessary set of data on:
+We propose a detailed, theory-based and reproducible analysis of what processes most limit diversity in any given region.  Past work on the limits to species diversity have proposed four varyingly orthogonal and complementary hypotheses:
+
+1) niche partitioning and competative coexistence
+2) neutral drift
+3) speciation, extinction, immigration balance
+4) environmental variation
+
+
+To ensure the generality of our approach we bring together DOB projects that span from continental to island systems, temperate to tropical, and with or without temporally explicit observations.  We propose to selectively re-sample some study areas to ensure that each project has a minimum necessary set of data on:
 
 1) relevant species/individual traits
 2) species abundance or presence/absence
