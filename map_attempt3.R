@@ -1,10 +1,11 @@
-## from stackoverflow: https://stackoverflow.com/questions/10620862/use-different-center-than-the-prime-meridian-in-plotting-a-world-map
+## modified from stackoverflow: 
+## https://stackoverflow.com/questions/10620862/use-different-center-than-the-prime-meridian-in-plotting-a-world-map
 
 library(sp)
 library(maps)
-library(maptools)   ## map2SpatialLines(), pruneMap()
-library(rgdal)      ## CRS(), spTransform()
-library(rgeos)      ## readWKT(), gIntersects(), gBuffer(), gDifference() 
+library(maptools)
+library(rgdal)
+library(rgeos)
 
 ## Convert a "maps" map to a "SpatialLines" map
 makeSLmap <- function() {
@@ -23,18 +24,22 @@ sliceAtAntipodes <- function(SLmap, lon_0) {
     eqcCRS <- CRS("+proj=eqc")
     ## Reproject the map into Equidistant Cylindrical/Plate Caree projection 
     SLmap <- spTransform(SLmap, eqcCRS)
+    
     ## Make a narrow SpatialPolygon along the meridian opposite lon_0
     L  <- Lines(Line(cbind(long_180, c(-89, 89))), ID="cutter")
     SL <- SpatialLines(list(L), proj4string = llCRS)
     SP <- gBuffer(spTransform(SL, eqcCRS), 10, byid = TRUE)
+    
     ## Use it to clip any SpatialLines segments that it crosses
     ii <- which(gIntersects(SLmap, SP, byid=TRUE))
+    
     # Replace offending lines with split versions
     # (but skip when there are no intersections (as, e.g., when lon_0 = 0))
-    if(length(ii)) { 
+    if(length(ii) > 0) { 
         SPii <- gDifference(SLmap[ii], SP, byid=TRUE)
         SLmap <- rbind(SLmap[-ii], SPii)  
     }
+    
     return(SLmap)
 }
 
@@ -42,29 +47,37 @@ sliceAtAntipodes <- function(SLmap, lon_0) {
 recenterAndClean <- function(SLmap, lon_0) {
     llCRS <- CRS("+proj=longlat +ellps=WGS84")  ## map package's CRS
     newCRS <- CRS(paste("+proj=eqc +lon_0=", lon_0, sep=""))
+    
     ## Recenter 
     SLmap <- spTransform(SLmap, newCRS)
-    ## identify remaining 'scratch-lines' by searching for lines that
-    ## cross 2 of 3 lines of longitude, spaced 120 degrees apart
-    v1 <-spTransform(readWKT("LINESTRING(-62 -89, -62 89)", p4s=llCRS), newCRS)
-    v2 <-spTransform(readWKT("LINESTRING(58 -89, 58 89)",   p4s=llCRS), newCRS)
-    v3 <-spTransform(readWKT("LINESTRING(178 -89, 178 89)", p4s=llCRS), newCRS)
-    ii <- which((gIntersects(v1, SLmap, byid=TRUE) +
-                     gIntersects(v2, SLmap, byid=TRUE) +
-                     gIntersects(v3, SLmap, byid=TRUE)) >= 2)
-    SLmap[-ii]
+    
+    return(SLmap)
 }
 
 ## Put it all together:
 Recenter <- function(lon_0 = -100, grid=FALSE, ...) {                        
     SLmap <- makeSLmap()
     SLmap2 <- sliceAtAntipodes(SLmap, lon_0)
-    recenterAndClean(SLmap2, lon_0)
+    
+    out <- recenterAndClean(SLmap2, lon_0)
+    return(out)
 }
 
-## Try it out
-par(mfrow=c(2,2), mar=rep(1, 4))
-plot(Recenter(-90), col="grey40"); box() ## Centered on 90w 
-plot(Recenter(0),   col="grey40"); box() ## Centered on prime meridian
-plot(Recenter(90),  col="grey40"); box() ## Centered on 90e
-plot(Recenter(180), col="grey40"); box() ## Centered on International Date Line
+x <- readOGR('dodoB.kml', 'dodoB')
+x@data <- data.frame(x@data[, 1, drop = FALSE],
+                     project = c('amazon', 'atlanticForest', 'us-china', 
+                                 'us-china', 'hawaii', 'palau'),
+                     area = c(3931680, 719858, 1530108, 
+                              1450601, 140406, 67469),
+                     col = hsv(c(0, 0.09, 0.15, 0.15, 0.7, 0.8)), 
+                     stringsAsFactors = FALSE)
+
+m <- Recenter(170)
+x <- spTransform(x, CRS(proj4string(m)))
+
+pdf('foo.pdf')
+plot(m, xlim = c(-1e+07, 2e+07), col = 'gray')
+plot(x, col = x$col, add = TRUE)
+polygon(c(2.1e+07, 1.5e+07, 2.1e+07), c(-3e+06, 4e+06, 7.5e+06), col = 'white', 
+        border = 'white')
+dev.off()
