@@ -76,7 +76,8 @@ x@data <- data.frame(x@data[, 1, drop = FALSE],
 m <- Recenter(170)
 x <- spTransform(x, CRS(proj4string(m)))
 
-pdf('fig_map.pdf', width = 10, height = 4)
+# pdf('fig_map.pdf', width = 10, height = 4)
+jpeg('fig_map.pdf', width = 3800, height = 1520)
 layout(matrix(1:2, ncol = 2), widths = c(2, 1))
 
 ## the actual map
