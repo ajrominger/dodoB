@@ -76,8 +76,7 @@ x@data <- data.frame(x@data[, 1, drop = FALSE],
 m <- Recenter(170)
 x <- spTransform(x, CRS(proj4string(m)))
 
-# pdf('fig_map.pdf', width = 10, height = 4)
-jpeg('fig_map.pdf', width = 3800, height = 1520)
+pdf('fig_map.pdf', width = 10, height = 4)
 layout(matrix(1:2, ncol = 2), widths = c(2, 1))
 
 ## the actual map
@@ -114,7 +113,17 @@ for(i in 1:length(aScaleMax)) {
     #         col = colAlpha(aCol[i], 0.5), border = aCol[i], lwd = 3)
     smoothPoly(c(aScaleMin[i], aScaleMax[i], aScaleMax[i], aScaleMin[i]), 
                c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10, aResoMin[i]), 
-               col = colAlpha(aCol[i], 0.5), border = aCol[i], lwd = 2)
+               col = colAlpha(aCol[i], 0.4), border = aCol[i], lwd = 1)
+}
+
+
+for(i in 1:length(aScaleMax)) {
+    # polygon(c(aScaleMin[i], aScaleMax[i], aScaleMax[i]), 
+    #         c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10), 
+    #         col = colAlpha(aCol[i], 0.5), border = aCol[i], lwd = 3)
+    smoothPoly(c(aScaleMin[i], aScaleMax[i], aScaleMax[i], aScaleMin[i]), 
+               c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10, aResoMin[i]), 
+               border = aCol[i], lwd = 2)
 }
 
 axis(1, at = 10^c(1, 4, 7), labels = c(expression(10~km^2), 
