@@ -68,7 +68,7 @@ x1 <- rwalk(100, -0.1, trt[tre$tip.label == 't11'], 0.01)
 x2 <- rwalk(50, x1[51], trt[tre$tip.label == 't2'], 0.01)
 
 
-pdf('fig_mod_trt.pdf', width = 3, height = 3)
+pdf('fig_mod_trt.pdf', width = 3, height = 2)
 par(mar = c(2, 2, 0, 0) + 0.5, mgp = c(1, 0, 0))
 
 plot(1:100, x1, ylim = range(x1, x2), type = 'n', axes = FALSE, 
@@ -151,13 +151,13 @@ par(mfcol = c(2, 1), oma = c(3, 3, 0, 0) + 0.1, mar = rep(0.2, 4), mgp = c(1, 1,
 set.seed(1)
 plot(sort(rnbinom(100, 1, mu = 20), TRUE), 
      axes = FALSE, frame.plot = TRUE, 
-     panel.first = rect(par('usr')[1], 10^par('usr')[3], par('usr')[2], 10^par('usr')[4], 
+     panel.first = rect(par('usr')[1], par('usr')[3], par('usr')[2], par('usr')[4], 
                         col = col1, border = NA))
 
 set.seed(12)
 plot(sort(rnbinom(100, 4, mu = 20), TRUE), 
      axes = FALSE, frame.plot = TRUE, 
-     panel.first = rect(par('usr')[1], 10^par('usr')[3], par('usr')[2], 10^par('usr')[4], 
+     panel.first = rect(par('usr')[1], par('usr')[3], par('usr')[2], par('usr')[4], 
                         col = col2, border = NA))
 
 mtext('Population rank', side = 1, line = 0.5, outer = TRUE, cex = 1.5)
