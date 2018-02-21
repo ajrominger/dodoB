@@ -1,4 +1,4 @@
-pdf('fig_hyp.pdf', width = 3.9 * 3, height = 2 * 2)
+pdf('fig_hyp.pdf', width = (3 - 0.8) * 3, height = (3 - 0.42) * 2)
 
 split.screen(matrix(c(0, 1/3, 0.5, 1, 
                       1/3, 2/3, 0.5, 1, 
@@ -78,7 +78,7 @@ x <- seq(1.55, 2, length.out = 8) + runif(8, -0.05, 0.05)
 y <- x + runif(8, 0.1, 0.35)
 points(x, y, col = hsv(0.1, 1, 0.8), pch = 16)
 
-text(1.3, 1.4, labels = '1:1 line', srt = 45, col = 'gray50', cex = 0.8, adj = c(0.5, 0))
+text(1.35, 1.4, labels = '1:1 line', srt = 45, col = 'gray50', cex = 0.8, adj = c(0.5, 0))
 text(1.25, 0.8, labels = 'Immigration', col = hsv(0.6, 0.6, 0.4), adj = c(0, 0.5), cex = 0.9)
 text(1.75, 2.2, labels = 'Competition', col = hsv(0.1, 1, 0.8), adj = c(1, 0.5), cex = 0.9)
 
@@ -89,12 +89,3 @@ mtext('H5', side = 3, line = 0.2)
 close.screen(all.screens = TRUE)
 
 dev.off()
-
-
-pdf('afoo.pdf', width = 6, height = 8)
-par(mar = c(2, 2, 2, 0.1))
-plot(1)
-text(1, 1, 'fooooooooo', srt = 45, cex = 3)
-abline(0, 1)
-dev.off()
-
