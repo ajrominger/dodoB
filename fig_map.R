@@ -6,6 +6,7 @@ library(maps)
 library(maptools)
 library(rgdal)
 library(rgeos)
+library(socorro)
 
 ## Convert a "maps" map to a "SpatialLines" map
 makeSLmap <- function() {
@@ -76,62 +77,18 @@ x@data <- data.frame(x@data[, 1, drop = FALSE],
 m <- Recenter(170)
 x <- spTransform(x, CRS(proj4string(m)))
 
-pdf('fig_map.pdf', width = 10, height = 4)
-layout(matrix(1:2, ncol = 2), widths = c(2, 1))
+pdf('fig_map.pdf', width = 6, height = 4)
 
-## the actual map
 par(mar = rep(0.5, 4))
 plot(m, xlim = c(-1e+07, 2e+07), col = 'gray', lwd = 0.75)
 plot(x, col = colAlpha(x$col, 0.7), border = x$col, add = TRUE, lwd = 2)
 polygon(c(2.1e+07, 1.5e+07, 2.1e+07), c(-3e+06, 4e+06, 7.5e+06), col = 'white', 
         border = 'white')
 
-## the scale plot
+rect(par('usr')[1], par('usr')[3], -9000000, -4500000, col = 'white', border = 'white')
 
-aScaleMax <- tapply(x$area, x$project, mean)
-aScaleMin <- c(10^5, 10^4, 10^2, 10, 10^5)
-aResoMax <- aScaleMax / 10^3
-aResoMin <- c(100, 100, 1, 1, 50)
-aCol <- tapply(x$col, x$project, head, n = 1)
-
-smoothPoly <- function(x, y, ...) {
-    xpr <- exp(spline(1:length(x), log(x), n = 50)[[2]])
-    ypr <- exp(spline(1:length(y), log(y), n = 50)[[2]])
-    
-    polygon(xpr, ypr, ...)
-}
-
-par(mar = c(4, 2.5, 2, 1.5) + 0.5, mgp = c(2, 0.5, 0))
-
-plot(1, log = 'xy', axes = FALSE, type = 'n',
-     xlim = c(10^1, 10^7), ylim = c(0.5, 10^6), 
-     xlab = 'Spatial scale', ylab = 'Spatial resolution')
-
-for(i in 1:length(aScaleMax)) {
-    # polygon(c(aScaleMin[i], aScaleMax[i], aScaleMax[i]), 
-    #         c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10), 
-    #         col = colAlpha(aCol[i], 0.5), border = aCol[i], lwd = 3)
-    smoothPoly(c(aScaleMin[i], aScaleMax[i], aScaleMax[i], aScaleMin[i]), 
-               c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10, aResoMin[i]), 
-               col = colAlpha(aCol[i], 0.4), border = aCol[i], lwd = 1)
-}
-
-
-for(i in 1:length(aScaleMax)) {
-    # polygon(c(aScaleMin[i], aScaleMax[i], aScaleMax[i]), 
-    #         c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10), 
-    #         col = colAlpha(aCol[i], 0.5), border = aCol[i], lwd = 3)
-    smoothPoly(c(aScaleMin[i], aScaleMax[i], aScaleMax[i], aScaleMin[i]), 
-               c(aResoMin[i], aResoMax[i], aScaleMax[i] / 10, aResoMin[i]), 
-               border = aCol[i], lwd = 2)
-}
-
-axis(1, at = 10^c(1, 4, 7), labels = c(expression(10~km^2), 
-                                       expression(10^4~km^2),
-                                       expression(10^7~km^2)))
-axis(2, at = 10^c(0, 3, 6), labels = c(expression(1~km^2), 
-                                       expression(10^3~km^2),
-                                       expression(10^6~km^2)))
-box()
+legend(-9000000, -4500000, legend = c('Amazonia', 'Atlantic Forest', 'US-China', 'Hawaii', 'Palau'), 
+       bg = 'white', box.col = 'white', cex = 0.8,
+       pch = 21, pt.cex = 1.2, col = unique(x$col), pt.bg = colAlpha(unique(x$col), 0.7))
 
 dev.off()
