@@ -1,0 +1,349 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%% Set up for letter-sized paper
+\usepackage[paper=letterpaper,
+marginparwidth=1.1In,     % Length of section titles
+marginparsep=0in,       % Space between titles and text
+margin=1in,               % 1 inch margins
+includemp]{geometry}
+
+%% Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% Make smaller skip between paragraphs
+\setlength{\parskip}{-0.1in}
+
+%% Reference the last page in the page number
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+{0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+  \parbox{4in}{\, \hfill %
+    \arabic{page} of \protect\pageref*{LastPage}
+    \hfill \,}}
+
+%% PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+% for URLs
+\usepackage{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+
+\newcommand{\makeheading}[1]{
+  \hspace*{-\marginparsep minus \marginparwidth}%
+  \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+    \begin{center}
+      {\large \bfseries #1}\\[-0.15\baselineskip]%      
+      \rule{\columnwidth}{1pt}%
+    \end{center}
+  \end{minipage}
+}
+
+%% The section headings
+%% Follow this section IMMEDIATELY with the first line of the section
+%% text. Do not put whitespace in between.
+\renewcommand{\section}[2]%
+        {\pagebreak[3]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+%% tabular styles for including dates in list of CV content
+\usepackage{array, xcolor}
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{p{0.19\textwidth}}
+\newcolumntype{R}{p{0.81\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+%% To compress itemized environments
+\usepackage{enumitem}
+\setlist{nolistsep}
+\setlist{noitemsep}
+
+
+%% To add some paragraph space between lines.
+%% This also tells LaTeX to preferably break a page on one of these gaps
+%% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+
+%% NOTE: \rcollength is the width of the right column of the table
+\newlength{\rcollength}\setlength{\rcollength}{2.75in}%
+
+
+%% THIS IS THE PRIMARY COMMAND USED FOR ENTERING CV DATA!!!!
+\newcommand{\cventry}[2]{%
+\begin{tabular}[t]{R !{\VRule} L}
+  \begin{minipage}[t][][t]{0.81\textwidth}
+    #2
+  \end{minipage}
+  &
+  \parbox[t][][t]{0.19\textwidth}{#1}
+\end{tabular}%
+\vspace{0.25em}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% \makeauthorbold{Rominger}
+\makeheading{Andrew J.~Rominger}
+
+\section{Contact Information}
+%
+\begin{tabular}[t]{p{\textwidth-\rcollength}p{\rcollength}}
+  \multicolumn{2}{l}{Santa Fe Institute} \\  
+  1399 Hyde Park Road &\textit{E-mail:} \verb|rominger@santafe.edu|\\
+  Santa Fe, New Mexico 87501 USA & \textit{Web:} \verb|ajrominger.github.io|\\
+\end{tabular}
+
+\section{(A) Professional Preparation}
+%
+\cventry{2009}{
+  {\bf B.S. Hons. Stanford University}, Stanford, California \\
+   Biological Sciences
+}
+%
+\cventry{2016}{
+  {\bf Ph.D. University of California}, Berkeley, California \\
+  Environmental Science, Policy \& Management
+}
+
+\section{(B) Appointments}
+%
+\cventry{2017}{
+  {\bf Omidyar Fellow,} Santa Fe Institute
+}
+%
+\cventry{2016}{
+  {\bf Post Doctoral Scholar,} UC Berkeley \\
+  Berkeley Initiative in Global Change Biology
+}
+%
+\cventry{2014}{
+  {\bf Graduate Student Instructor,} UC Berkeley
+}
+%
+\cventry{2011--2014}{
+  {\bf NSF Graduate Research Fellow,} UC Berkeley
+}
+%
+\cventry{2010}{
+  {\bf Fulbright Scholar,} Pontificia Universidad Cat\'olica de Chile
+}
+%
+\cventry{2009}{
+  {\bf Teaching Assistant,} Stanford University
+}
+
+
+\section{(C) Products (i)}
+%
+\cventry{2017}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 1. \hspace{0.569em} O'Dwyer JP, {\bf Rominger AJ}, Xiao
+    X (2017). Reinterpreting Maximum Entropy in Ecology: a null
+    hypothesis constrained by ecological mechanism. {\it Ecology
+      Letters}. Ecology letters, 20: 832--841.
+%
+  \item[]\hspace{-1.1\leftmargin} 2. \hspace{1.25em}{\bf Rominger AJ}, Merow C. (2017)
+{\tt meteR}: An {\tt R} package for testing the Maximum Entropy Theory
+of Ecology. {\it Methods in Ecology and Evolution} 8: 241--247.
+\end{itemize}
+}
+%
+\cventry{2016}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 3. \hspace{1em}{\bf Rominger AJ}, {\it et
+      al.}. (2016). Community assembly on isolated islands: Macroecology meets
+    evolution. {\it Global Ecology and Biogeography} 25: 769--780.
+  \end{itemize}
+}
+%
+\cventry{2015}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 4. \hspace{0.7em} Harte J, {\bf Rominger AJ}, Zhang
+    W. (2015). Integrating macroecological metrics and community taxonomic
+    structure. {\it Ecology Letters} 18: 1068--1077.
+  \end{itemize}
+}
+%
+\cventry{2012}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 5. \hspace{0.5em} Karp DS, {\bf Rominger AJ}, Zook J,
+    Ranganathan J, Ehrlich PR \& Daily GC. (2012). Intensive
+    agriculture erodes $\beta$-diversity
+    at large scales. {\it Ecology Letters} 15: 963--970.
+  \end{itemize}
+}
+
+
+\section{(C) Products (ii)}
+%
+\cventry{in press}{
+\begin{itemize}
+\item[]\hspace{-1.3\leftmargin} 1. \hspace{-3em} Harte J, Newman EA, {\bf Rominger
+    AJ}. (2017) Metabolic partition across individuals in ecological
+  communities. {\it Global Ecology and Biogeography}. Online early:
+  {\tt onlinelibrary.wiley.com/doi/10.1111/geb.12621/full}
+  \end{itemize}
+}
+%
+\cventry{2017}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 2. \hspace{0.9em} Stegner MA, Karp DS, {\bf Rominger
+      AJ}, Hadly EA (2017). Can protected areas really maintain mammalian
+    diversity? Insights from a nestedness analysis of the Colorado
+    Plateau. {\it Biological Conservation} 209: 546--553.
+  \end{itemize}
+}
+%
+\cventry{2013}{
+  \begin{itemize}
+  \item[]\hspace{-1.2\leftmargin} 3. \hspace{0em} Harte J, Kitzes J, Newman E, {\bf
+      Rominger AJ}. (2013). Taxon categories and the universal
+    species-area relationship: A comment on Sizling et al.  {\it The
+      American Naturalist} 181: 282--287.
+  \end{itemize}
+}
+%
+\cventry{2012}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 4. \hspace{0.8em} Maurer BA, Kembel SW, {\bf Rominger
+      AJ} \& McGill BJ. (2012). Estimating metacommunity extent using
+    data on species abundances, environmental variation, and
+    phylogenetic relationships across geographic space. {\it
+      Ecological Informatics} 13: 114--122.
+  \end{itemize}
+}
+%
+\cventry{2009}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 5. \hspace{1.2em}{\bf Rominger AJ}, Miller TEX \& Collins
+    SL. (2009). Relative contributions of neutral and niche-based
+    processes to the structure of a desert grassland grasshopper
+    community. {\it Oecologia} 161: 791--800.
+  \end{itemize}
+}
+
+\section{(D) Synergistic Activities}
+%
+\cventry{2017--present}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 1. \hspace{1.25em}{\bf High School Mentor} \\
+  Guide high school students in independent projects through the Santa
+  Fe Institute's mentoring program.
+  \end{itemize}
+}
+
+%
+\cventry{2013--2016}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 1. \hspace{1.25em}{\bf Board Member} \\
+  Talking Talons Youth Leadership Community Fund, an organization that
+  funds environmental education projects.
+  \end{itemize}
+}
+%
+\cventry{2009--present}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 2. \hspace{1.25em}{\bf Community presentation speaker} \\
+  Present at youth and environmental group meetings including Central
+  New Mexico Audubon Society and Pacific Internship Programs for
+  Exploring Science about science, conservation and environmental
+  education.
+  \end{itemize}
+}
+%
+\cventry{2009}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 3. \hspace{1.25em}{\bf Splash instructor} \\
+  Thought an interactive course about global change biology to K-12
+  students as part of Stanford University's Educational Studies Splash
+  Program.
+  \end{itemize}
+}
+%
+\cventry{2006--2011}{
+  \begin{itemize}
+  \item[]\hspace{-1.1\leftmargin} 4. \hspace{1.25em}{\bf Natural history docent} \\
+  Lead classroom and community tours of Jasper Ridge Biological
+  Preserve (Stanford University) focusing on local
+  conservation issues, ecology, evolution and geology.
+  \end{itemize}
+}
+
+% \section{Collaborators}
+% %
+% \begin{tabular}[t]{p{1\textwidth}}
+%   E.~Armstrong (U Hawaii); 
+%   L.~Becking (Institute for Marine Resources and Ecosystem Studies); 
+%   G.~Bennett (U of Hawaii); 
+%   M.~Brewer (UC Berkeley);
+%   S.~Collins (U New Mexico); 
+%   D.~Cotoras (UC Santa Cruz);
+%   G.~Daily (Stanford University);
+%   R.~Dirzo (Stanford University);
+%   P.~Ehrlich (Stanford University);
+%   D.~Erwin (Smithsonian);
+%   C.~Ewing (U Hawaii);
+%   M.~Fuentes (Consejo Nacional de Investigaciones Cient\'ificas y
+%   T\'ecnicas);
+%   R.~Gillespie (UC Berkeley);
+%   K.~Goodman (UC Berkeley);
+%   D.~Gruner (U Maryland);
+%   E.~Hadly (Stanford University);
+%   J.~Harte (UC Berkeley);
+%   S.~Kembel (U Qu\'ebec \`a Montr\'eal);
+%   J.~Lim (UC Berkeley);
+%   P.~Marquet (Pontificia Universidad Cat\'olica de Chile);
+%   C.~Marshall (UC Berkeley);
+%   N.~Martinez (U Arizona);
+%   B.~Mauer (Michigan State University);
+%   B.~McGill (U Maine);
+%   C.~Merow (U Connecticut);
+%   T.~Miller (Rice University);
+%   J.~O'Dwyer (U Illinois Urbana-Champaign);
+%   P.~O'Grady (UC Berkeley);
+%   D.~Percy (Natural History Museum, London);
+%   D.~Price (U Hawaii);
+%   G.~Roderick (UC Berkeley);
+%   K.~Shaw (Cornell University);
+%   F.~Valdovinos (U Arizona);
+%   P.~Wagner (Smithsonian).
+%   X.~Xiao (U Main)
+% \end{tabular}
+
+
+
+\end{document}
