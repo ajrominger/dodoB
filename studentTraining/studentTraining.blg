@@ -1,46 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: studentTraining.aux
-The style file: unsrtnat.bst
+The style file: grant.bst
 Database file #1: studentTraining.bib
 You've used 6 entries,
-            2481 wiz_defined-function locations,
-            592 strings with 6198 characters,
-and the built_in function-call counts, 3137 in all, are:
-= -- 206
-> -- 288
+            2349 wiz_defined-function locations,
+            550 strings with 5711 characters,
+and the built_in function-call counts, 2077 in all, are:
+= -- 176
+> -- 54
 < -- 0
-+ -- 102
-- -- 90
-* -- 321
-:= -- 556
-add.period$ -- 18
++ -- 24
+- -- 12
+* -- 121
+:= -- 272
+add.period$ -- 6
 call.type$ -- 6
-change.case$ -- 12
-chr.to.int$ -- 6
+change.case$ -- 6
+chr.to.int$ -- 0
 cite$ -- 6
-duplicate$ -- 114
-empty$ -- 223
-format.name$ -- 96
-if$ -- 611
-int.to.chr$ -- 1
-int.to.str$ -- 7
-missing$ -- 6
-newline$ -- 38
-num.names$ -- 18
-pop$ -- 42
+duplicate$ -- 198
+empty$ -- 205
+format.name$ -- 18
+if$ -- 461
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 48
+newline$ -- 27
+num.names$ -- 6
+pop$ -- 60
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 0
 quote$ -- 0
-skip$ -- 61
+skip$ -- 30
 stack$ -- 0
-substring$ -- 140
-swap$ -- 12
+substring$ -- 128
+swap$ -- 120
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
+type$ -- 0
 warning$ -- 0
-while$ -- 23
-width$ -- 0
-write$ -- 85
+while$ -- 17
+width$ -- 7
+write$ -- 62
