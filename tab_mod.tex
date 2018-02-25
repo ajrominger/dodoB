@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{array}
+
+\usepackage{color, colortbl}
+
+
+\usepackage[table]{xcolor}
+
+
+\begin{document}
+
+
+\newcolumntype{M}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\definecolor{Gray}{gray}{0.9}
+
+\begin{table}
+  \centering
+  \footnotesize
+  \rowcolors{1}{white}{Gray}
+  \begin{tabular}{|ll|M{0.2\textwidth}|M{0.2\textwidth}|M{0.2\textwidth}|}
+    \hline
+    {\bf Process} & {\bf (symbol)} & {\bf Neutral} & {\bf Environment x Trait} & {\bf Trait x Trait} \\
+    % 
+    \hline \hline
+    % 
+    birth & ($b$) & equals fitness & equals fitness & positive function of fitness and negative function of competition \\
+    % 
+    death & ($d$) & constant & constant & constant \\
+    % 
+    immigration & ($\nu$) & constant & positive function of potential fitness in colonizing environment & negative function of potential competition in colonizing community \\
+    % 
+    fitness & ($r$) & constant & positive function of environmental suitability of trait & constant \\
+    % 
+    competition & ($a_{ij}$) & 0 & 0 & positive function of trait-overlap \\
+    % 
+    speciation & ($\lambda$) & constant & positive function of environmental suitability of incipient trait & negative function of trait-overlap of incipient species \\
+    % 
+    mutation & ($\mu$) & constant  & constant  & constant \\
+    % 
+    trait evolution & ($\sigma$, $\theta$) & Brownian & Ornstein-Uhlenbeck & Ornstein-Uhlenbeck or Brownian \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+
+
+\end{document}
