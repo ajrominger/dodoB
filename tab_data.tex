@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{array}
+\usepackage{color, colortbl}
+\usepackage[table]{xcolor}
+
+
+\begin{document}
+
+
+\newcolumntype{M}[1]{>{\raggedright\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\definecolor{yes}{rgb}{0.63, 0.73, 0.9}
+\definecolor{no}{rgb}{0.9, 0.79, 0.63}
+\definecolor{planned}{gray}{0}
+
+\newcommand{\yes}{\cellcolor{yes}}
+\newcommand{\no}{\cellcolor{no}}
+\newcommand{\planned}{\cellcolor{planned}}
+
+\newlength{\dc}
+\setlength{\dc}{0.1\textwidth}
+
+\begin{table}
+  \centering
+  \footnotesize
+  \begin{tabular}{|ll|M{\dc}|M{\dc}|M{\dc}|M{\dc}|M{\dc}|M{\dc}|}
+    \hline
+    Project & Taxon & Abund. & Occur. & Pop. gen. & Phylo. & Traits & Enviro. \\
+    \hline \hline
+    Hawaii & Arthropods & \yes & \yes & \yes & \planned & \planned & \yes \\
+    \cline{3-8}
+    Palau & Algae & \yes & \yes & \yes & \planned & \yes & \yes \\
+    \cline{3-8}
+    Palau & Invertabrates & \yes & \yes & \yes & \planned & \yes & \yes \\
+    \cline{3-8}
+    Palau & Fish & \no & \yes & \yes & \yes & \yes & \yes \\
+    \cline{3-8}
+    Atlantic Forest & Plants & \no & \yes & \planned & \planned & \planned & \yes \\
+    \cline{3-8}
+    Atlantic Forest & Butterflies & \yes & \yes & \planned & \planned & \yes & \yes \\
+    \cline{3-8}
+    Atlantic Forest & Frogs & \planned & \yes & \yes & \yes & \yes & \yes \\
+    \cline{3-8}
+    Amazonia & Plants & \planned & \yes & \yes & \yes & \yes & \yes \\
+    \cline{3-8}
+    Amazonia & Birds & \planned & \yes & \yes & \yes & \yes & \yes \\
+    \cline{3-8}
+    US-China & Plants & \yes & \yes & \yes & \yes & \yes & \yes \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+
+
+\end{document}
