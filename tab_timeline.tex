@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{array}
+
+\usepackage{color, colortbl}
+
+\usepackage[table]{xcolor}
+
+
+\begin{document}
+
+\definecolor{Gray}{gray}{0.85}
+\definecolor{gray2}{gray}{0.7}
+
+\newcolumntype{M}[1]{>{\raggedright\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{a}{>{\columncolor{Gray}}M{0.05\textwidth}@{}}
+\newcolumntype{b}{>{\columncolor{white}}M{0.05\textwidth}@{}}
+
+\renewcommand{\tabcolsep}{0pt}
+\newcommand{\trule}{\rule[0ex]{1\linewidth}{1.5ex}}
+\newcommand{\tline}{\arrayrulecolor{gray2}\hline\arrayrulecolor{black}}
+
+
+\footnotesize
+\begin{tabular}{|m{0.005\textwidth} m{0.51\textwidth} | a b a b a |}
+  \hline
+  & Activity & Yr 1 & Yr 2 & Yr 3 & Yr 4 & Yr 5 \\
+  \hline \hline 
+  & Organizational working group at Santa Fe Institute (SFI) & \trule &&&& \\
+  & Informatics pipeline & \trule & \trule &&& \\
+  & Data Carpentry workshop && \trule &&& \\
+  & Filling data gaps (abundance, genetics, traits) & \trule & \trule &&& \\
+  & Model development & \trule & \trule & \trule && \\
+  & Model validation and fitting with simulated data &&& \trule & \trule & \\
+  & Model-based inference with real data &&&& \trule & \trule \\
+  & Capstone workshop at SFI  &&&& & \trule\\
+  \hline
+\end{tabular}
+
+\end{document}
