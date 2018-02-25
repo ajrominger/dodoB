@@ -80,7 +80,7 @@ x <- spTransform(x, CRS(proj4string(m)))
 pdf('fig_map.pdf', width = 6, height = 4)
 
 par(mar = rep(0.5, 4))
-plot(m, xlim = c(-1e+07, 2e+07), col = 'gray', lwd = 0.75)
+plot(m, xlim = c(-1e+07, 1.88e+07), col = 'gray', lwd = 0.75)
 plot(x, col = colAlpha(x$col, 0.7), border = x$col, add = TRUE, lwd = 2)
 polygon(c(2.1e+07, 1.5e+07, 2.1e+07), c(-3e+06, 4e+06, 7.5e+06), col = 'white', 
         border = 'white')
@@ -90,5 +90,12 @@ rect(par('usr')[1], par('usr')[3], -9000000, -4500000, col = 'white', border = '
 legend(-9000000, -4500000, legend = c('Amazonia', 'Atlantic Forest', 'US-China', 'Hawaii', 'Palau'), 
        bg = 'white', box.col = 'white', cex = 0.8,
        pch = 21, pt.cex = 1.2, col = unique(x$col), pt.bg = colAlpha(unique(x$col), 0.7))
+
+split.screen(c(1, 1), erase = FALSE)
+par(mar = rep(0.05, 4))
+plot(1, type = 'n', axes = FALSE)
+box()
+
+close.screen(all.screens = TRUE)
 
 dev.off()
