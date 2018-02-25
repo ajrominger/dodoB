@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: studentTraining.aux
+The style file: unsrtnat.bst
+Database file #1: studentTraining.bib
+You've used 6 entries,
+            2481 wiz_defined-function locations,
+            592 strings with 6198 characters,
+and the built_in function-call counts, 3137 in all, are:
+= -- 206
+> -- 288
+< -- 0
++ -- 102
+- -- 90
+* -- 321
+:= -- 556
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 12
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 114
+empty$ -- 223
+format.name$ -- 96
+if$ -- 611
+int.to.chr$ -- 1
+int.to.str$ -- 7
+missing$ -- 6
+newline$ -- 38
+num.names$ -- 18
+pop$ -- 42
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 61
+stack$ -- 0
+substring$ -- 140
+swap$ -- 12
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 42
+warning$ -- 0
+while$ -- 23
+width$ -- 0
+write$ -- 85

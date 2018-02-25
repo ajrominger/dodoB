@@ -1,0 +1,57 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cook et~al.(2014)Cook, Edwards, Lacey, Guralnick, Soltis, Soltis,
+  Welch, Bell, Galbreath, Himes, et~al.]{cook2014}
+Joseph~A Cook, Scott~V Edwards, Eileen~A Lacey, Robert~P Guralnick, Pamela~S
+  Soltis, Douglas~E Soltis, Corey~K Welch, Kayce~C Bell, Kurt~E Galbreath,
+  Christopher Himes, et~al.
+\newblock Natural history collections as emerging resources for innovative
+  education.
+\newblock \emph{BioScience}, 64\penalty0 (8):\penalty0 725--734, 2014.
+
+\bibitem[Lacey et~al.(2017)Lacey, Hammond, Walsh, Bell, Edwards, Ellwood,
+  Guralnick, Ickert-Bond, Mast, McCormack, et~al.]{lacey2017}
+Eileen~A Lacey, Talisin~T Hammond, Rachel~E Walsh, Kayce~C Bell, Scott~V
+  Edwards, Elizabeth~R Ellwood, Robert Guralnick, Stefanie~M Ickert-Bond,
+  Austin~R Mast, John~E McCormack, et~al.
+\newblock Climate change, collections and the classroom: using big data to
+  tackle big problems.
+\newblock \emph{Evolution: Education and Outreach}, 10\penalty0 (1):\penalty0
+  2, 2017.
+
+\bibitem[Goring et~al.(2014)Goring, Weathers, Dodds, Soranno, Sweet,
+  Cheruvelil, Kominoski, R{\"u}egg, Thorn, and Utz]{goring2014}
+Simon~J Goring, Kathleen~C Weathers, Walter~K Dodds, Patricia~A Soranno, Lynn~C
+  Sweet, Kendra~S Cheruvelil, John~S Kominoski, Janine R{\"u}egg, Alexandra~M
+  Thorn, and Ryan~M Utz.
+\newblock Improving the culture of interdisciplinary collaboration in ecology
+  by expanding measures of success.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 39--47, 2014.
+
+\bibitem[Wuchty et~al.(2007)Wuchty, Jones, and Uzzi]{wuchty2007}
+Stefan Wuchty, Benjamin~F Jones, and Brian Uzzi.
+\newblock The increasing dominance of teams in production of knowledge.
+\newblock \emph{Science}, 316\penalty0 (5827):\penalty0 1036--1039, 2007.
+
+\bibitem[Cheruvelil et~al.(2014)Cheruvelil, Soranno, Weathers, Hanson, Goring,
+  Filstrup, and Read]{cheruvelil2014}
+Kendra~S Cheruvelil, Patricia~A Soranno, Kathleen~C Weathers, Paul~C Hanson,
+  Simon~J Goring, Christopher~T Filstrup, and Emily~K Read.
+\newblock Creating and maintaining high-performing collaborative research
+  teams: the importance of diversity and interpersonal skills.
+\newblock \emph{Frontiers in Ecology and the Environment}, 12\penalty0
+  (1):\penalty0 31--38, 2014.
+
+\bibitem[Jones et~al.(2008)Jones, Wuchty, and Uzzi]{jones2008}
+Benjamin~F Jones, Stefan Wuchty, and Brian Uzzi.
+\newblock Multi-university research teams: Shifting impact, geography, and
+  stratification in science.
+\newblock \emph{science}, 322\penalty0 (5905):\penalty0 1259--1262, 2008.
+
+\end{thebibliography}
