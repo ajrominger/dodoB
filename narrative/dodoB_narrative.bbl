@@ -351,6 +351,16 @@ Krehenwinkel, H. \emph{et~al.} (2017) Estimating and mitigating amplification
   bias in qualitative and quantitative arthropod metabarcoding.
 \newblock \emph{Sci. Rep.} 7, 17668
 
+\bibitem{che2012}
+Che, J. \emph{et~al.} (2012) Universal coi primers for dna barcoding
+  amphibians.
+\newblock \emph{Molecular Ecology Resources} 12, 247--258
+
+\bibitem{bi2018chloroplast}
+Bi, Y. \emph{et~al.} (2018) Chloroplast genomic resources for phylogeny and dna
+  barcoding: a case study on fritillaria.
+\newblock \emph{Scientific reports} 8, 1184
+
 \bibitem{Lopez-Gonzalez2011-wr}
 Lopez-Gonzalez, G. \emph{et~al.} (2011) {ForestPlots.net}: a web application
   and research tool to manage and analyse tropical forest plot data.
@@ -405,6 +415,11 @@ Rosenberg, N.A. and Nordborg, M. (2002) Genealogical trees, coalescent theory
 Kelleher, J. \emph{et~al.} (2016) Efficient coalescent simulation and
   genealogical analysis for large sample sizes.
 \newblock \emph{PLoS Comput. Biol.} 12, e1004842
+
+\bibitem{waples2007}
+Waples, R.S. and Yokota, M. (2007) Temporal estimates of effective population
+  size in species with overlapping generations.
+\newblock \emph{Genetics} 175, 219--233
 
 \bibitem{Anderson2014-fi}
 Anderson, J. \emph{et~al.} (2014) The more, the merrier: the blessing of
