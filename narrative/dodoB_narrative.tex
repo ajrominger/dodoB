@@ -219,9 +219,9 @@ communities assembled from refugia after climate change
 Evaluating how general these observations are across systems, and how
 they influence species-level, phylogenetic, population genetic, and
 functional trait diversity, necessitates the collection, management and
-analysis of multi-dimensional data on i) the abundance of species, ii)
-their geo-referenced occurrences, iii) ecologically-relevant traits, iv)
-phylogenetic and population genetic histories, and v) the environment.
+analysis of multi-dimensional data on (i) the abundance of species, (ii)
+their geo-referenced occurrences, (iii) ecologically-relevant traits, (iv)
+phylogenetic and population genetic histories, and (v) the environment.
 We propose to build such informatic synthesis tools and to
 quantitatively compare the support for these different hypothesized
 mechanisms across five systems.
@@ -543,9 +543,9 @@ barriers are (1) allowing for short-term data entry and long-term data
 storage and sharing; (2) integrating abundance, phylogeny, and
 environmental data into a data management environment primarily
 intended for specimen data; and (3) educating researchers about proper
-data management using principles from data science. This last barrier
-we address with substantial curriculum development, detailed in
-section \ref{training-and-mentoring} on training and Broader Impacts.
+data management. This last barrier we address with substantial
+curriculum development, detailed in section
+\ref{training-and-mentoring} on training and Broader Impacts.
 
 It is critical to insure that trait, occurrence, and abundance data
 are standardized properly across all projects. We will use
@@ -640,12 +640,10 @@ sequence data.
 
 \subsubsection{Collection of new data} \label{collection-of-new-data}
 
-Because we selected five mature DoB projects to populate our
-bioinformatics pipeline and test our model, many data resources are
+Because we selected five mature DoB projects, many data resources are
 already available; our new data collection efforts will focus on
-filling specific gaps to ensure continuity of data types across
-projects. Table \ref{tab:data} summarizes available data and gaps to
-be filled.
+filling specific gaps (see Table \ref{tab:data}) to ensure continuity
+of data types across projects.
 
 \begin{table}[!htb]
 \newcolumntype{M}[1]{>{\raggedright\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -909,32 +907,32 @@ $N_e$ which, together with mutation rate, determines the distribution
 of genetic diversities across species. Across long time scales new
 species arise and traits evolve.
 
-The assembly of local communities by birth, death, and immigration is
-well studied and we will use these results to implement efficient
-forward time simulations \cite{Haegeman2017-kf,Kendall1948-ri}.  These
-forward-time assemblage histories will feed into aggregate population
-genetic histories that can be efficiently simulated via extensions of
-the Kingman coalescent \cite{Rosenberg2002-vb}. We will use msprime
-\cite{Kelleher2016-an} to implement this coalescent approach to
-simulating population genetic data. These simulations depend on the
-time trajectory of effective population size ($N_e$) for each species
-and the mutation rate $\mu$. The time trajectory of $N_e$ for a
-species is determined by that species' simulated population
-fluctuations \cite{waples2007}, which in turn derive from the
-parameters of birth, death, and immigration, which are fit to the
-data.  Mutation rate $\mu$ is a free parameter that will also be fit
-to the data.
+We will use well known mathematical results for assembly by birth,
+death, and immigration \cite{Haegeman2017-kf,Kendall1948-ri} to
+implement efficient forward time simulations.  These forward-time
+assemblage histories will constrain the coalescent simulation of
+genetic data \cite{Rosenberg2002-vb, waples2007}. We will use {\it
+  msprime} \cite{Kelleher2016-an} to implement this coalescent
+approach, which requires the time trajectory of effective population
+sizes ($N_e$) for each species and the mutation rate $\mu$ as
+input. The time trajectory of $N_e$ for a species is determined by
+that species' simulated population fluctuations \cite{waples2007},
+which in turn derive from the model parameters of birth ($b$), death
+($d$), and immigration ($\nu$).  Mutation rate $\mu$ is also a free
+parameter.
 
 \subsubsection{Model fitting}\label{model-fitting}
 
-Because we are interested in the non-analytically tractable
-non-equilibrium dynamics of eco-evolutionary community assembly
-(\textbf{H5}), we will use simulation-based approaches to model fitting,
-including new advances in machine learning and hierarchical ABC. Fitting
-our model that jointly predicts four data axes that span the three
-dimensions of biodiversity under many mechanistic processes is precisely
-the means by which we test our hypotheses about the drivers of diversity
-(\textbf{R3}).
+All processes in Table \ref{tab:mod} are expressed by parameters which
+need to be fit to data. Because we are interested in the
+non-analytically tractable non-equilibrium dynamics of
+eco-evolutionary community assembly (\textbf{H5}), we cannot derive
+simplie likelihood functions, and so will use simulation-based
+approaches to model fitting, including new advances in machine
+learning and hierarchical ABC. Fitting our model that jointly predicts
+four data axes that span the three dimensions of biodiversity under
+many mechanistic processes is precisely the means by which we test our
+hypotheses about the drivers of diversity (\textbf{R3}).
 
 While ABC has been standard for inference of complex models
 \cite{Beaumont2010-si}, we are also interested in exploring machine
@@ -1028,31 +1026,24 @@ Life.
 
 \subsection{Training and mentoring}\label{training-and-mentoring}
 
-In partnership with Data Carpentry we will develop new workshop
-content for the analysis of heterogeneous biodiversity data. Data
-Carpentry is a non-profit organization that teaches hands-on, domain
-specific, and evidence-based workshops. These workshops provide
-scientists the core computational and analytical skills they need to
-work with large and complex datasets. We will organize a lesson
-development hackathon to assemble the content of the workshop with the
-PIs, Co-PIs, and members of the Data Carpentry staff and community. We
-will use this content in a national workshop for $\approx 30$
-participants to be hosted by the co-PIs at the University of Florida,
-who have organized $10+$ Data and Software Carpentry workshops. The
-data science principles taught in the workshops will be practiced by
-students---who will receive support to attend---as they prepare,
+We will work with Data Carpentry and Software Carpentry (``The
+Carpentries'') to design new workshop content for heterogeneous
+biodiversity data.The Carpentris are a non-profit organization that
+teaches hands-on, evidence-based workshops. We will use our newly
+developed content in a national workshop (for $\approx 30$
+participants) to be hosted by the Co-PIs at the University of Florida,
+who have demonstrated success in hosting such workshops. The data
+science principles taught in the workshop will be practiced by
+students---who will receive support to attend--- as they prepare,
 curate, and publish the new data that will be generated for our
 proposed research.
 
-To make this educational material as broadly accessible as possible, the
-biodiversity data science curriculum created in the course of this
-workshop will be developed as a massive open online course (MOOC) hosted
-on the Santa Fe Institute's online education platform. This content will
-be licensed under creative commons. The creation of this course will
-leverage existing infrastructure and expertise at the Santa Fe
-Institute, including the SFI video recording studio, a robust online
-education platform and learning management system, and the expertise of
-the SFI online education staff and media specialists.
+To make this educational material as broadly accessible as possible,
+the biodiversity data science curriculum will be developed as a
+massive open online course (MOOC) hosted on the Santa Fe Institute's
+online education platform. This content will be licensed under
+creative commons. The creation of this course will leverage existing
+infrastructure and expertise at the Santa Fe Institute.
 
 \subsection{Open source software for science and conservation}\label{open-source-software}
 
