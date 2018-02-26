@@ -10,7 +10,7 @@ split.screen(matrix(c(0, 1/3, 0.5, 1,
 screen(1)
 par(mar = c(2, 2, 2, 0.1), mgp = c(0.25, 0, 0))
 plot(1:2, type = 'n', axes = FALSE, frame.plot = TRUE, xlim = c(0.75, 2.25), ylim = c(0.75, 2.25), 
-     xlab = 'Immigration', ylab = 'Speciation')
+     xlab = expression('Immigration'~(nu)), ylab = expression('Speciation'~(lambda)))
 segments(1, 2, 2, 1, lwd = 3)
 
 par(xpd = NA)
@@ -20,7 +20,7 @@ mtext('H1', side = 3, line = 0.2)
 screen(2)
 par(mar = c(2, 2, 2, 0.1), mgp = c(0.25, 0, 0))
 plot(1:2, type = 'n', axes = FALSE, frame.plot = TRUE, xlim = c(0.75, 2.25), ylim = c(0.75, 2.25), 
-     xlab = 'Enviro. var.', ylab = 'Speciation')
+     xlab = 'Enviro. var.', ylab = expression('Speciation'~(lambda)))
 segments(1, 1, 2, 2, lwd = 3)
 
 par(xpd = NA)
@@ -30,7 +30,7 @@ mtext('H2', side = 3, line = 0.2)
 screen(3)
 par(mar = c(2, 2, 2, 0.1), mgp = c(0.25, 0, 0))
 plot(1:2, type = 'n', axes = FALSE, frame.plot = TRUE, xlim = c(0.75, 2.25), ylim = c(0.75, 2.25), 
-     xlab = 'Competition', ylab = 'Diversity')
+     xlab = expression('Competition'~(alpha[ij])), ylab = 'Diversity')
 segments(1, 1, 2, 2, lwd = 3)
 
 par(xpd = NA)
@@ -43,20 +43,20 @@ split.screen(1:2, 4, erase = FALSE)
 screen(6, new = FALSE)
 par(mar = c(2, 2, 2, 0), mgp = c(0.25, 0, 0))
 plot(1:2, type = 'n', axes = FALSE, frame.plot = TRUE, xlim = c(0.75, 2.25), ylim = c(0.75, 2.25), 
-     xlab = '', ylab = 'Enviro. filtering')
+     xlab = '', ylab = expression('Enviro. filtering'~(rho)))
 segments(1, 2, 2, 1, lwd = 3)
 
 screen(7, new = FALSE)
 par(mar = c(2, 2, 2, 0.1), mgp = c(0.25, 0, 0))
 plot(1:2, type = 'n', axes = FALSE, frame.plot = TRUE, xlim = c(0.75, 2.25), ylim = c(0.75, 2.25), 
-     xlab = '', ylab = 'Competition')
+     xlab = '', ylab = expression('Competition'~(alpha[ij])))
 segments(1, 2, 2, 1, lwd = 3)
 
 
 screen(4, new = FALSE)
 par(mar = c(2, 2, 2, 0.1), mgp = c(0.25, 0, 0))
 plot(1:2, type = 'n', axes = FALSE, xlim = c(0.75, 2.25), ylim = c(0.75, 2.25), 
-     xlab = 'Immigration', ylab = '')
+     xlab = expression('Immigration'~(nu)), ylab = '')
 
 par(xpd = NA)
 rect(par('usr')[1], par('usr')[4], par('usr')[2], par('usr')[4] + 0.3, col = 'gray')
