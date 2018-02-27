@@ -346,6 +346,20 @@ Douglas, K. and Douglas, S. (2003) \emph{{PostgreSQL}: A Comprehensive Guide to
   Building, Programming, and Administering {PostgresSQL} Databases}.
 \newblock Sams Publishing
 
+\bibitem{brown2004}
+Brown, J.H. \emph{et~al.} (2004) Toward a metabolic theory of ecology.
+\newblock \emph{Ecology} 85, 1771--1789
+
+\bibitem{price2012}
+Price, C.A. \emph{et~al.} (2012) Testing the metabolic theory of ecology.
+\newblock \emph{Ecology letters} 15, 1465--1474
+
+\bibitem{elith2009}
+Elith, J. and Leathwick, J.R. (2009) Species distribution models: ecological
+  explanation and prediction across space and time.
+\newblock \emph{Annual review of ecology, evolution, and systematics} 40,
+  677--697
+
 \bibitem{Krehenwinkel2017-zk}
 Krehenwinkel, H. \emph{et~al.} (2017) Estimating and mitigating amplification
   bias in qualitative and quantitative arthropod metabarcoding.
@@ -411,15 +425,15 @@ Rosenberg, N.A. and Nordborg, M. (2002) Genealogical trees, coalescent theory
   and the analysis of genetic polymorphisms.
 \newblock \emph{Nat. Rev. Genet.} 3, 380--390
 
-\bibitem{Kelleher2016-an}
-Kelleher, J. \emph{et~al.} (2016) Efficient coalescent simulation and
-  genealogical analysis for large sample sizes.
-\newblock \emph{PLoS Comput. Biol.} 12, e1004842
-
 \bibitem{waples2007}
 Waples, R.S. and Yokota, M. (2007) Temporal estimates of effective population
   size in species with overlapping generations.
 \newblock \emph{Genetics} 175, 219--233
+
+\bibitem{Kelleher2016-an}
+Kelleher, J. \emph{et~al.} (2016) Efficient coalescent simulation and
+  genealogical analysis for large sample sizes.
+\newblock \emph{PLoS Comput. Biol.} 12, e1004842
 
 \bibitem{Anderson2014-fi}
 Anderson, J. \emph{et~al.} (2014) The more, the merrier: the blessing of

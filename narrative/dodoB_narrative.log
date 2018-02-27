@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 FEB 2018 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 FEB 2018 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -691,135 +691,152 @@ File: ../fig_mod.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../fig_mod.pdf used on input line 370.
 (pdftex.def)             Requested size: 328.82707pt x 246.61606pt.
  [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 []\T1/cmr/m/n/9 Figure 3: |Cor-re-la-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 our five hy-pothe-ses are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 and ``im-mi-gra-tion'' re-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 to com-mu-ni-ties in-ferred
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 to be competition-driven
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 446--446
+Underfull \hbox (badness 5175) in paragraph at lines 450--450
 \T1/cmr/m/n/9 ver-sus immigration-driven,
  []
 
 <../fig_hyp.pdf, id=226, 476.78125pt x 372.39125pt>
 File: ../fig_hyp.pdf Graphic file (type pdf)
  <use ../fig_hyp.pdf>
-Package pdftex.def Info: ../fig_hyp.pdf used on input line 446.
+Package pdftex.def Info: ../fig_hyp.pdf used on input line 450.
 (pdftex.def)             Requested size: 328.82707pt x 256.84227pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 []\T1/cmr/m/n/9 Figure 3: |Cor-re-la-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 our five hy-pothe-ses are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 and ``im-mi-gra-tion'' re-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 to com-mu-ni-ties in-ferred
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 to be competition-driven
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 446--446
+Underfull \hbox (badness 5175) in paragraph at lines 450--450
 \T1/cmr/m/n/9 ver-sus immigration-driven,
  []
 
 File: ../fig_hyp.pdf Graphic file (type pdf)
 <use ../fig_hyp.pdf>
-Package pdftex.def Info: ../fig_hyp.pdf used on input line 446.
+Package pdftex.def Info: ../fig_hyp.pdf used on input line 450.
 (pdftex.def)             Requested size: 328.82707pt x 256.84227pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 []\T1/cmr/m/n/9 Figure 3: |Cor-re-la-tions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 our five hy-pothe-ses are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 and ``im-mi-gra-tion'' re-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 to com-mu-ni-ties in-ferred
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
 \T1/cmr/m/n/9 to be competition-driven
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 446--446
+Underfull \hbox (badness 5175) in paragraph at lines 450--450
 \T1/cmr/m/n/9 ver-sus immigration-driven,
  []
 
 File: ../fig_hyp.pdf Graphic file (type pdf)
 <use ../fig_hyp.pdf>
-Package pdftex.def Info: ../fig_hyp.pdf used on input line 446.
+Package pdftex.def Info: ../fig_hyp.pdf used on input line 450.
 (pdftex.def)             Requested size: 328.82707pt x 256.84227pt.
  [5 <../fig_mod.pdf>] [6 <../fig_hyp.pdf>] [7]
+
+Package natbib Warning: Citation `brown2004' on page 8 undefined on input line 
+654.
+
+
+Package natbib Warning: Citation `price2012' on page 8 undefined on input line 
+654.
+
+
+Package natbib Warning: Citation `elith2009' on page 8 undefined on input line 
+657.
+
 \dc=\skip81
- [8] [9]
-[10] [11] [12] [13] [14] (./dodoB_narrative.bbl
+[8] [9] [10] [11] [12] [13] [14] [15] (./dodoB_narrative.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 276.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1245.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1245.
 
-(./dodoB_narrative.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1245.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1245.
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1259.
+[16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1259.
+ (./dodoB_narrative.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1259.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1259.
 
 Package rerunfilecheck Info: File `dodoB_narrative.out' has not changed.
 (rerunfilecheck)             Checksum: 2B085ED693C7875924089DBE1DDA3668;1551.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1245.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1259.
  ) 
 Here is how much of TeX's memory you used:
- 10489 strings out of 492995
- 157774 string characters out of 6132704
- 309230 words of memory out of 5000000
- 13731 multiletter control sequences out of 15000+600000
+ 10493 strings out of 492995
+ 157814 string characters out of 6132704
+ 302675 words of memory out of 5000000
+ 13734 multiletter control sequences out of 15000+600000
  18358 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,13n,69p,1000b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1124,10 +1141,10 @@ ve/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on dodoB_narrative.pdf (15 pages, 617595 bytes).
+Output written on dodoB_narrative.pdf (16 pages, 618889 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 148 named destinations out of 1000 (max. 500000)
+ 613 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
+ 149 named destinations out of 1000 (max. 500000)
  192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

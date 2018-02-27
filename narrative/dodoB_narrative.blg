@@ -8,45 +8,45 @@ Warning--empty year in Overcast_undated-op
 Warning--empty note in Chan2018-qh
 Warning--empty note in May2017-ji
 Warning--empty journal in Dawson2016-aq
-You've used 146 entries,
+You've used 149 entries,
             2349 wiz_defined-function locations,
-            1412 strings with 37229 characters,
-and the built_in function-call counts, 46130 in all, are:
-= -- 3846
-> -- 1199
+            1427 strings with 37854 characters,
+and the built_in function-call counts, 47224 in all, are:
+= -- 3943
+> -- 1226
 < -- 3
-+ -- 538
-- -- 269
-* -- 2561
-:= -- 5889
-add.period$ -- 148
-call.type$ -- 146
-change.case$ -- 141
++ -- 550
+- -- 275
+* -- 2628
+:= -- 6026
+add.period$ -- 151
+call.type$ -- 149
+change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 151
-duplicate$ -- 4481
-empty$ -- 4665
-format.name$ -- 392
-if$ -- 10318
+cite$ -- 154
+duplicate$ -- 4579
+empty$ -- 4773
+format.name$ -- 401
+if$ -- 10562
 int.to.chr$ -- 0
-int.to.str$ -- 146
-missing$ -- 1070
-newline$ -- 588
-num.names$ -- 146
-pop$ -- 1472
+int.to.str$ -- 149
+missing$ -- 1094
+newline$ -- 600
+num.names$ -- 149
+pop$ -- 1502
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 770
+skip$ -- 786
 stack$ -- 0
-substring$ -- 2628
-swap$ -- 2635
+substring$ -- 2715
+swap$ -- 2695
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 347
-width$ -- 149
-write$ -- 1423
+while$ -- 356
+width$ -- 152
+write$ -- 1453
 (There were 5 warnings)
