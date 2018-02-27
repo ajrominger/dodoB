@@ -2,24 +2,82 @@ library(ape)
 library(viridis)
 library(socorro)
 library(pika)
+library(jpeg)
+library(raster)
+library(rgeos)
+
+## function to read in image and make polygon output
+arthOutline <- function(f, maxCol = 100) {
+    a <- readJPEG(f)
+    
+    r <- as.matrix(as.raster(a))
+    cols <- unique(as.vector(r))
+    
+    r <- raster(matrix((r %in% cols[colSums(col2rgb(cols)) < maxCol]) * 1, nrow = nrow(r)))
+    
+    l <- rasterToContour(r)
+    x <- l@lines[[1]]@Lines[[1]]@coords
+    
+    return(x)
+}
+
+## funciton to add arthropod to a plot by name
+addArth <- function(arth, x, y, width, col, alpha = 1) {
+    d <- '~/Dropbox/Research/grants/macrosystems/figs'
+    a <- switch(arth,
+                'fly' = arthOutline(file.path(d, 'fly.jpg')),
+                'moth' = arthOutline(file.path(d, 'moth.jpg'), 400),
+                'beetle' = arthOutline(file.path(d, 'beetle.jpg')))
+    
+    yasp <- diff(range(par('usr')[3:4])) / diff(range(par('usr')[1:2]))
+    if(arth %in% c('fly', 'beetle')) yasp <- yasp * 1.5
+    
+    a[, 2] <- a[, 2] * yasp
+    
+    asp <- width / diff(range(a[, 1]))
+    a <- a * asp
+    
+    ai <- a
+    for(i in 1:length(x)) {
+        ai[, 1] <- a[, 1] - mean(a[, 1]) + x[i]
+        ai[, 2] <- a[, 2] - mean(a[, 2]) + y[i]
+        
+        polygon(ai, col = rgb(t(col2rgb(col)), maxColorValue = 255, alpha = alpha*255), 
+                border = ifelse(alpha == 1, 'black', col))
+    }
+}
+
 
 ## regional phylo
 set.seed(5)
-tre <- rphylo(20, 0.9, 0.8)
+tre <- rphylo(5, 0.9, 0.8)
 set.seed(2)
 trt <- rTraitCont(tre)
-trt[tre$tip.label == 't2'] <- 2 * trt[tre$tip.label == 't2']
+# trt[tre$tip.label == 't2'] <- 2 * trt[tre$tip.label == 't2']
+trt['t5'] <- -0.05
+trt['t3'] <- -0.02
+
 
 pdf('fig_mod_phylo.pdf', width = 3, height = 3)
-par(mar = rep(0.1, 4))
-plot(tre, show.tip.label = FALSE)
-tiplabels(pch = 21, bg = quantCol(trt, pal = viridis(10)))
+par(mar = rep(1, 4))
+plot(tre, show.tip.label = FALSE, edge.width = 3)
+
+xTip <- max(get("last_plot.phylo", envir = .PlotPhyloEnv)$xx)
+ordTip <- c('t3', 't4', 't1', 't5', 't2')
+colTrt <- quantCol(trt[ordTip], pal = viridis(10))
+
+par(xpd = NA)
+arth <- c('beetle', 'beetle', 'fly', 'fly', 'moth')
+for(i in 1:length(arth)) {
+    addArth(arth[i], x = 1.05 * xTip, y = i, width = ifelse(arth[i] == 'moth', 0.6, 0.4), col = colTrt[i])
+}
+
 dev.off()
 
 ## local comm
 locPlot <- function(r, x0, y0, n0, trt, env, ...) {
     ## xy for dots
-    coord <- seq(-r, r, length.out = ceiling(sqrt(n0 / (pi*0.5^2))))
+    coord <- seq(-r, r, length.out = ceiling(1.1 * sqrt(n0 / (pi*0.5^2))))
     xy <- expand.grid(coord, coord)
     xy <- xy[sqrt(xy[, 1]^2 + xy[, 2]^2) <= 1.05 * r, ]
     xy[, 1] <- xy[, 1] + x0
@@ -33,20 +91,38 @@ locPlot <- function(r, x0, y0, n0, trt, env, ...) {
     ## plotting
     rOut <- diff(range(xy[, 1])) / 2 + diff(xy[1:2, 1]) / 1.5
     
-    polygon(x0 + rOut * cos(seq(0, 2*pi, length.out = 100)), 
-            y0 + rOut * sin(seq(0, 2*pi, length.out = 100)), 
+    polygon(x0 + 1.1*rOut * cos(seq(0, 2*pi, length.out = 100)), 
+            y0 + 1.1*rOut * sin(seq(0, 2*pi, length.out = 100)), 
             col = colAlpha(quantCol(env, viridis(10), xlim = range(trt)), 0.2))
     
-    points(xy, bg = quantCol(n1, viridis(10), xlim = range(trt)), 
-           pch = 21, ...)
+    n1 <- n1[(xy[, 1] - x0)^2 + (xy[, 2] - y0)^2 < rOut^2]
     
+    ## jerry rig
+    n1 <- n1[c(1, 4, 5, 2, 3)] 
+    if(n1[1] == trt['t1']) {
+        n1[1] <-trt['t3']
+        names(n1)[1] <- 't3'
+    }
+    
+    xy <- xy[(xy[, 1] - x0)^2 + (xy[, 2] - y0)^2 < rOut^2, ]
+    
+    arth1 <- match(names(n1), ordTip)
+    col1 <- quantCol(n1, viridis(10), xlim = range(trt))
+    
+    for(i in 1:length(n1)) {
+        addArth(arth[arth1[i]], x = xy[i, 1], y = xy[i, 2], width = ifelse(arth[arth1[i]] == 'moth', 0.55, 0.3), col = col1[i])
+    }
+    
+    return(arth1)
 }
 
 pdf('fig_mod_comm.pdf', width = 3, height = 3)
 par(mar = rep(0.1, 4))
 plot(1, xlim = c(-2, 2), ylim = c(-2, 2), asp = 1, type = 'n', axes = FALSE)
-locPlot(0.75, -0.5, 1, 20, trt, 0.9 * max(trt), cex = 1)
-locPlot(0.75, 0.5, -1, 20, trt, 0.5 * min(trt), cex = 1)
+set.seed(1)
+abund1 <- locPlot(1.25, -0.5, 1, 15, trt, 0.9 * max(trt), cex = 1)
+set.seed(2)
+abund2 <- locPlot(1.25, 0.5, -1, 15, trt, 0.5 * min(trt), cex = 1)
 dev.off()
 
 ## trait evol through time
@@ -63,9 +139,10 @@ rwalk <- function(n, x0, x1, sd) {
     return(newX)
 }
 
-set.seed(123)
-x1 <- rwalk(100, -0.1, trt[tre$tip.label == 't11'], 0.01)
-x2 <- rwalk(50, x1[51], trt[tre$tip.label == 't2'], 0.01)
+set.seed(5)
+x1 <- rwalk(100, 0.07, trt[tre$tip.label == 't3'], 0.005)
+set.seed(1)
+x2 <- rwalk(50, x1[51], trt[tre$tip.label == 't4'], 0.005)
 
 
 pdf('fig_mod_trt.pdf', width = 3, height = 2)
@@ -93,10 +170,11 @@ dev.off()
 set.seed(123)
 y1 <- cumsum(c(10, rnorm(100)))
 
-pdf('fig_mod_pop.pdf', width = 4, height = 2)
+pdf('fig_mod_pop.pdf', width = 3.5, height = 1.8)
 par(mar = c(2, 2, 0, 0) + 0.5, mgp = c(1, 0, 0))
 plot(cumsum(c(0, rexp(y1[-1]))), y1, type = 's', lwd = 2, axes = FALSE,
-     xlab = 'Hundreds of years', ylab = 'Abundance')
+     xlab = 'Hundreds of years', ylab = '', col = quantCol(trt['t3'], viridis(5), xlim = range(trt)))
+mtext('Abundance', side = 2, line = 0.25)
 box()
 axisArrows(1, length = 0.1, lwd = 2)
 dev.off()
@@ -106,65 +184,106 @@ dev.off()
 set.seed(12)
 coal <- rphylo(10, 1, 0.7)
 
-pdf('fig_mod_coal.pdf', width = 4, height = 2)
+pdf('fig_mod_coal.pdf', width = 3.5, height = 1.8)
 par(mar = rep(0.1, 4))
-plot(coal, show.tip.label = FALSE)
+plot(coal, show.tip.label = FALSE, edge.width = 3,
+     edge.col = quantCol(trt['t3'], viridis(5), xlim = range(trt)))
 dev.off()
-
-foo <- get("last_plot.phylo", envir = .PlotPhyloEnv)
-s <- diff(c(foo$xx[-(1:Ntip(coal))], max(foo$xx)))
-m <- s * 2:Ntip(coal)
-mut <- sample(Ntip(coal) - 1, 12, prob = m, replace = TRUE)
 
 
 ## abundances
 
-col1 <- colAlpha(quantCol(0.9 * max(trt), viridis(10), xlim = range(trt)), 0.2)
-col2 <- colAlpha(quantCol(0.5 * min(trt), viridis(10), xlim = range(trt)), 0.2)
+pdf('fig_mod_abund.pdf', width = 1.5, height = 3.5)
+par(mfcol = c(2, 1), mar = c(3, 1.3, 0, 0) + 0.2, mgp = c(1.5, 1, 0))
 
-pdf('fig_mod_abund.pdf', width = 3, height = 6)
-par(mfcol = c(2, 1), oma = c(3, 3, 0, 0) + 0.1, mar = rep(0.2, 4), mgp = c(1, 1, 0))
+comm1 <- table(abund1)
+barplot(sort(comm1, decreasing = TRUE), col = colTrt[c(2, 1, 4, 3)], 
+        ylab = '', yaxt = 'n', names.arg = NA)
+# axisArrows(2, length = 0.1)
+box()
+mtext('Abundance', side = 2, line = 0.25)
 
-set.seed(1)
-plot(sort(rtnegb(100, 0.1, mu = 6), TRUE), log = 'y', 
-     axes = FALSE, frame.plot = TRUE, 
-     panel.first = rect(par('usr')[1], 10^par('usr')[3], par('usr')[2], 10^par('usr')[4], 
-                        col = col1, border = NA))
-
-set.seed(12)
-plot(sort(rtnegb(100, 4, mu = 6), TRUE), log = 'y', 
-     axes = FALSE, frame.plot = TRUE, 
-     panel.first = rect(par('usr')[1], 10^par('usr')[3], par('usr')[2], 10^par('usr')[4], 
-                        col = col2, border = NA))
-
-mtext('Species rank', side = 1, line = 0.5, outer = TRUE, cex = 1.5)
-mtext('Abundance', side = 2, line = 0.5, outer = TRUE, cex = 1.5)
+comm2 <- table(abund2)
+barplot(sort(comm2, decreasing = TRUE), col = colTrt[as.numeric(names(sort(comm2, TRUE)))], 
+        ylab = '', yaxt = 'n', names.arg = NA)
+# axisArrows(2, length = 0.1)
+box()
+mtext('Abundance', side = 2, line = 0.25)
 
 dev.off()
 
 
-## pi
 
-pdf('fig_mod_genDiv.pdf', width = 3, height = 6)
-par(mfcol = c(2, 1), oma = c(3, 3, 0, 0) + 0.1, mar = rep(0.2, 4), mgp = c(1, 1, 0))
 
-set.seed(1)
-plot(sort(rnbinom(100, 1, mu = 20), TRUE), 
-     axes = FALSE, frame.plot = TRUE, 
-     panel.first = rect(par('usr')[1], par('usr')[3], par('usr')[2], par('usr')[4], 
-                        col = col1, border = NA))
+## pop gen
 
-set.seed(12)
-plot(sort(rnbinom(100, 4, mu = 20), TRUE), 
-     axes = FALSE, frame.plot = TRUE, 
-     panel.first = rect(par('usr')[1], par('usr')[3], par('usr')[2], par('usr')[4], 
-                        col = col2, border = NA))
+pdf('fig_mod_genDiv.pdf', width = 1.5, height = 3.5)
+par(mfcol = c(2, 1), mar = c(3, 1.3, 0, 0) + 0.2, mgp = c(1.5, 1, 0))
 
-mtext('Population rank', side = 1, line = 0.5, outer = TRUE, cex = 1.5)
-mtext(expression('Genetic diversity'~(pi)), side = 2, line = 0.5, outer = TRUE, cex = 1.5)
+comm1 <- table(abund1)
+barplot(c(4, 2, 1, 0.25), col = colTrt[c(2, 1, 4, 3)], 
+        ylab = '', yaxt = 'n', names.arg = NA)
+# axisArrows(2, length = 0.1)
+box()
+mtext(expression('Genetic div'~(pi)), side = 2, line = 0.25)
+
+comm2 <- table(abund2)
+barplot(c(1, 2, 1.7, 3), col = colTrt[as.numeric(names(sort(comm2, TRUE)))], 
+        ylab = '', yaxt = 'n', names.arg = NA)
+# axisArrows(2, length = 0.1)
+box()
+mtext(expression('Genetic div'~(pi)), side = 2, line = 0.25)
 
 dev.off()
 
+
+# 
+# col1 <- colAlpha(quantCol(0.9 * max(trt), viridis(10), xlim = range(trt)), 0.2)
+# col2 <- colAlpha(quantCol(0.5 * min(trt), viridis(10), xlim = range(trt)), 0.2)
+# 
+# pdf('fig_mod_abund.pdf', width = 3, height = 6)
+# par(mfcol = c(2, 1), oma = c(3, 3, 0, 0) + 0.1, mar = rep(0.2, 4), mgp = c(1, 1, 0))
+# 
+# set.seed(1)
+# plot(sort(rtnegb(100, 0.1, mu = 6), TRUE), log = 'y', 
+#      axes = FALSE, frame.plot = TRUE, 
+#      panel.first = rect(par('usr')[1], 10^par('usr')[3], par('usr')[2], 10^par('usr')[4], 
+#                         col = col1, border = NA))
+# 
+# set.seed(12)
+# plot(sort(rtnegb(100, 4, mu = 6), TRUE), log = 'y', 
+#      axes = FALSE, frame.plot = TRUE, 
+#      panel.first = rect(par('usr')[1], 10^par('usr')[3], par('usr')[2], 10^par('usr')[4], 
+#                         col = col2, border = NA))
+# 
+# mtext('Species rank', side = 1, line = 0.5, outer = TRUE, cex = 1.5)
+# mtext('Abundance', side = 2, line = 0.5, outer = TRUE, cex = 1.5)
+# 
+# dev.off()
+# 
+# 
+# ## pi
+# 
+# pdf('fig_mod_genDiv.pdf', width = 3, height = 6)
+# par(mfcol = c(2, 1), oma = c(3, 3, 0, 0) + 0.1, mar = rep(0.2, 4), mgp = c(1, 1, 0))
+# 
+# set.seed(1)
+# plot(sort(rnbinom(100, 1, mu = 20), TRUE), 
+#      axes = FALSE, frame.plot = TRUE, 
+#      panel.first = rect(par('usr')[1], par('usr')[3], par('usr')[2], par('usr')[4], 
+#                         col = col1, border = NA))
+# 
+# set.seed(12)
+# plot(sort(rnbinom(100, 4, mu = 20), TRUE), 
+#      axes = FALSE, frame.plot = TRUE, 
+#      panel.first = rect(par('usr')[1], par('usr')[3], par('usr')[2], par('usr')[4], 
+#                         col = col2, border = NA))
+# 
+# mtext('Population rank', side = 1, line = 0.5, outer = TRUE, cex = 1.5)
+# mtext(expression('Genetic diversity'~(pi)), side = 2, line = 0.5, outer = TRUE, cex = 1.5)
+# 
+# dev.off()
+# 
 
 
 
