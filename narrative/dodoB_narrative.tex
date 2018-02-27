@@ -10,11 +10,11 @@
 \usepackage{color, colortbl}
 \usepackage{array}
 \usepackage[numbers,sort&compress]{natbib}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead{}
-\fancyhead[LO,LE]{Rominger, {\it et al.}}
-\fancyhead[RO,RE]{Project Description}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhead{}
+% \fancyhead[LO,LE]{Rominger, {\it et al.}}
+% \fancyhead[RO,RE]{Project Description}
 
 \usepackage{changepage}
 
@@ -79,9 +79,9 @@
 
 
 \begin{document}
-% \maketitle
+\maketitle
 % \thispagestyle{fancy} 
-% \vspace{-6em}
+\vspace{-6em}
 
 \section{Intellectual Merit}\label{intellectual-merit}
 
@@ -90,7 +90,7 @@
 As phylogenetic and functional approaches transcend species-based
 estimates of diversity, we seek new answers to the age-old question
 \cite{Hutchinson1959-ob}, ``What limits diversity?'' At the
-intersection of evolutionary history, environmental opportunity,,
+intersection of evolutionary history, environmental opportunity,
 functional capacity, and genetic adaptive potential, a suite of
 fundamental processes (drift, migration, mutation, speciation,
 competition, environmental filtering) and emergent properties
@@ -115,12 +115,12 @@ become available through DoB and other similar initiatives.
 Because measurements of diversity reflected in the scale of DoB
 projects range from small archipelagos to whole biomes, we propose to
 synthesize and integrate across projects to understand the general
-rules governing biodiversity. Making sense of diverse and
-multi-dimensional data within and between such diverse biogeographical
-systems requires (1) having the \textbf{informatic ability} to
-synthesize and share them and (2) the \textbf{quantitative tools} to
-extract insight from synthesized data about the complex,
-multi-dimensional processes underlying biodiversity
+rules governing biodiversity. Making sense of heterogeneous and
+multi-dimensional data within and among such diverse biogeographical
+systems requires having (1) the \textbf{informatic ability} to
+synthesize and share data from different origins and (2) the
+\textbf{quantitative tools} to extract insight from synthesized data
+about the complex, multi-dimensional processes underlying biodiversity
 patterns. \textbf{We propose to fill these two gaps by (1) building an
   open source platform to manage and query diverse streams of
   biodiversity-relevant information, and (2) developing a stochastic
@@ -130,27 +130,28 @@ patterns. \textbf{We propose to fill these two gaps by (1) building an
   diversity.}  Through this model we will be able to quantify the
 contribution of three distinct classes of processes to the structure
 of biodiversity across disparate systems: (i) Stochastic immigration,
-speciation and extinction, (ii) species interactions with the biotic
+speciation, and extinction, (ii) species interactions with the biotic
 and abiotic environment, and (iii) historical contingencies.
 
 \textbf{To understand the universality of these processes, we will (3)
-test our model across five biogeographic systems for which
-multi-dimensional biodiversity data are now available,} due largely to
-DoB efforts. They include two naturally insular systems with differing
-degrees of isolation, age, and adaptive radiation (the Hawaiian island
-chronosequence and the marine lakes of Palau) and three forest systems
-with key gradients of diversity and evolutionary history, spanning
-scales of historic continental disjunctures (the Nearctic forests of
-North America and Asia), entire biomes (Amazonia), and large regions of
-unique endemism (the coastal Atlantic Forest of Brazil; Fig. 1). The two
-island projects additionally afford an explicitly temporal test of our
-model's dynamics---via the sediment cores from Palau's marine lakes and
-the chronosequence in Hawaii. By selectively augmenting data gathered by
-these DoB projects with new field observations, we will be able to test
-our model and begin to verify the universality of processes regulating
-the diversity of life. The new data we collect with add substantially
-to the Tree of Life, particularly for under-sampled clades such as
-arthropods and marine invertebrates.
+  test our model across five biogeographic systems for which
+  multi-dimensional biodiversity data are now available,} due largely
+to DoB efforts. They include two naturally insular systems with
+differing degrees of isolation, age, and adaptive radiation (the
+Hawaiian island chronosequence and the marine lakes of Palau) and
+three forest systems with key gradients of diversity and evolutionary
+history, spanning scales of historic continental disjunctions (the
+Nearctic forests of North America and Asia), entire biomes (Amazonia),
+and large regions of unique endemism (the coastal Atlantic Forest of
+Brazil; Fig. 1). The two island projects additionally afford an
+explicitly temporal test of our model's dynamics---via the sediment
+cores from Palau's marine lakes and the island chronosequence of
+Hawaii. By selectively augmenting data gathered by these DoB projects
+with new field observations we will be able to test our model and
+begin to verify the universality of processes regulating the diversity
+of life. The new data we collect will add substantially to the Tree of
+Life, particularly for under-sampled clades such as arthropods and
+marine invertebrates.
 
 \begin{wrapfigure}[]{r}{0.5\textwidth}
   \label{fig:map} 
@@ -159,9 +160,9 @@ arthropods and marine invertebrates.
     \includegraphics[width=1\textwidth]{../fig_map.pdf}
   \end{center}
   \vspace{-10pt}
-  \caption{Map of the included DoB projects showing their breadth of
-regions and scales.}
-  \vspace{-10pt}
+  \caption{Map of the included DoB projects illustrating their breadth of
+geographic region and scale.}
+\vspace{-10pt}
 \end{wrapfigure}
 
 
@@ -182,9 +183,9 @@ Current eco-evolutionary theory is not up to this task. Quantitative
 models inspired by the Equilibrium Theory of Island Biogeography
 \cite{MacArthur1967-ux} and the Neutral Theory of Biodiversity and
 Biogeography \cite{Hubbell2001-dx}, for instance, place emphasis on the
-equilibrium between rates of immigration, speciation, and extinction.Yet
+equilibrium between rates of immigration, speciation, and extinction. Yet
 while empirical work on islands and latitudinal gradients have
-demonstrated the significant role of immigration, speciation and
+demonstrated the significant role of immigration, speciation, and
 extinction histories \cite{Gillespie2004-zv, Owens2017-ja}, these neutral
 theories of eco-evolutionary drift are limited. For example,
 interspecific interactions and the environment have been shown
@@ -213,12 +214,12 @@ increasingly relevant in the Anthropocene \cite{Barnosky2012-qz}.
 Examples of this non-equilibrium hysteresis include island biogeography
 \cite{Ricklefs2001-af}, differences in otherwise similar biomes across
 East Asia and North America \cite{Qian2005-co,Yu2017-cc}, and
-communities assembled from refugia after climate change
+communities assembled from refugia after glacial retreat
 \cite{Carnaval2008-og,Carnaval2009-vd,Burbrink2016-nu}.
 
 Evaluating how general these observations are across systems, and how
 they influence species-level, phylogenetic, population genetic, and
-functional trait diversity, necessitates the collection, management and
+functional trait diversity, necessitates the collection, management, and
 analysis of multi-dimensional data on (i) the abundance of species, (ii)
 their geo-referenced occurrences, (iii) ecologically-relevant traits, (iv)
 phylogenetic and population genetic histories, and (v) the environment.
@@ -245,62 +246,63 @@ partnerships), as well as those generating vast quantities of
 heterogeneous data.
 
 Various isolated repositories do exist for warehousing some of these
-data independently. Initiatives such as iDigBio, GBIF, Dryad, GloBI, and
-NCBI provide some facility for depositing, cataloguing and accessing
-occurrence records, sequence, morphological and ecological data, and
-have been extensively used by the many DoB projects funded to date.
-However, the linkages that would crucially support re-integration of
-these data are in nearly all cases missing, which limits the ability to
-derive broader understanding across projects. While all the mentioned
-repositories are essential services to the global scientific community,
-they each have internal missions that are divergent from the needs of
-biodiversity project teams for data integration. Further, there are
-still limited metadata standards that are both general and comprehensive
-for ecological datasets, hampering integration, although new approaches
-have been proposed \cite{Guralnick2017-xb}. We argue that simply
-depositing data into such repositories is not enough. A key step forward
-is building a framework where data resources are standardized enough to
-simplify the process of feeding the right types of data into modeling
+data independently. Initiatives such as iDigBio, GBIF, Dryad, GloBI,
+and NCBI provide some facility for depositing, cataloguing, and
+accessing occurrence records, sequence, morphological and ecological
+data, and have been extensively used by the many DoB projects funded
+to date.  However, the linkages that would crucially support
+re-integration of these data are in nearly all cases missing, which
+limits the ability to derive broader understanding across
+projects. While all the mentioned repositories are essential services
+to the global scientific community, they each have internal missions
+that are divergent from the needs of biodiversity project teams for
+data integration. Further, there are still limited metadata standards
+that are both general and comprehensive for ecological datasets,
+hampering integration, although new approaches have been proposed
+\cite{Guralnick2017-xb}. We argue that simply depositing data into
+such repositories is not enough. A key step forward is building a
+framework where data resources are standardized enough to simplify the
+process of feeding the right types of data into modeling
 frameworks. To better understand biodiversity pattern and process, DoB
 projects and other biodiversity research teams should be able to ask
-questions about the multivariate forces that influence multiple systems;
-thus there is a critical need to assure that datasets talk to each
-other. \textbf{We will build a proof-of-concept platform that
-supports storing data for broadest possible use and also enhances
-modeling frameworks, such as those discussed below}. The
-outcome will be a scalable model knowledgebase that crosscuts and
-connects all dimensions of spatiotemporal biodiversity data.
+questions about the multivariate forces that influence multiple
+systems; thus there is a critical need to assure that datasets
+interoperate. \textbf{We will build a proof-of-concept platform that
+  supports storing data for broadest possible use and also enhances
+  modeling frameworks, such as those discussed below}. The outcome
+will be a scalable model knowledgebase that crosscuts and connects all
+dimensions of spatiotemporal biodiversity data.
 
 \subsubsection{Theory to integrate dimensions of
 biodiversity}\label{theory-to-integrate-dimensions-of-biodiversity}
 
-Recent efforts by Hickerson and his team have jointly modeled species
-abundance and community-level genetic variation through time
+Hickerson and his team have recently developed a joint model of
+species abundance and community-level genetic variation through time
 \cite{Overcast_undated-op}. Their work explicitly links a forward-time
 neutral model of community assembly with a backward-time neutral
-coalescent model of population genetics, fitting the model to data with
-approximate Bayesian computation \citep[ABC;][]{Beaumont2010-si}.
+coalescent model of population genetics, fitting the model to data
+with approximate Bayesian computation \citep[ABC;][]{Beaumont2010-si}.
 \textbf{We propose to extend this model to jointly predict species
-abundance, phylogeny, population genetic, and functional trait
-distributions within ecological communities (Fig.
-\ref{fig:mod})}. To achieve this theoretical advance, we will
+  abundance, phylogeny, population genetic, and functional trait
+  distributions within ecological communities (Fig.
+  \ref{fig:mod})}. To achieve this theoretical advance, we will
 incorporate speciation \cite{Rosindell2010-gq} and trait evolution to
-existing work in neutral theory \cite{Rosindell2011-od,Etienne2007-we}.
-By including population genetic and phylogenetic information when
-estimating the model and assessing its fit to data, we will capture
-signatures of temporal dynamics and scrutinize our work exactly where
-neutral theory fails most noticeably \cite{Ricklefs2006-tn}. In addition
-to modeling genetic axes of biodiversity data under neutrality, we will
-extend the neutral model to incorporate non-neutral processes, such as
-density dependence \cite{Haegeman2017-kf}, and the ability of fitness to
-evolve within and between species \cite{Rosindell2015-gp}, all of which
-will help to reconcile modeled temporal dynamics with reality. We will
-link these coarse-grained processes, for which mathematical details have
-been well-studied, to our trait data. For that, we will use model
+existing work in neutral theory \cite{Rosindell2011-od,
+  Etienne2007-we}.  By including population genetic and phylogenetic
+information when estimating the model and assessing its fit to data,
+we will capture signatures of temporal dynamics and scrutinize our
+work exactly where neutral theory fails most noticeably
+\cite{Ricklefs2006-tn}. We will also extend the neutral model to
+incorporate non-neutral processes, such as density dependence
+\cite{Haegeman2017-kf}, and the ability of fitness to evolve within
+and between species \cite{Rosindell2015-gp}, all of which will help to
+reconcile modeled temporal dynamics with reality. We will link these
+coarse-grained processes, for which mathematical details have been
+well-studied, to our trait data. For that, we will use model
 parameters that capture trait-based interactions with other species
-\cite{Grilli2017-ot,HilleRisLambers2012-xt} and environments
-\cite{Adler2010-ad,Jabot2008-ms,Tuomisto2003-kf}. Table \ref{tab:mod}
-shows how these processes enter into our model.
+\cite{Grilli2017-ot, HilleRisLambers2012-xt} and environments
+\cite{Adler2010-ad, Jabot2008-ms, Tuomisto2003-kf}. Table
+\ref{tab:mod} shows how these processes enter into our model.
 
 \begin{table}
 \newcolumntype{M}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -370,25 +372,6 @@ and spatial and temporal scales.
 {\includegraphics[width=0.7\textwidth]{../fig_mod.pdf}}
 \end{figure}
 
-% \begin{figure}[htbp]
-% \centering
-% \includegraphics[width=0.7\textwidth]{../fig_mod.pdf}
-% \caption{The processes captured by our model and the data types
-% predicted. Colors correspond to trait values. The processes are: birth,
-% death, immigration, and mutation in a coalescent framework (all of which
-% operate primarily on short time scales), and speciation and trait
-% evolution (all of which operate primarily on longer time scales). These
-% processes may be modulated by trait-based interactions among species and
-% between species and their environments as presented in Table 3.
-% Different environments and their trait compatibility are illustrated for
-% two hypothetical communities by the lighter background colors. The
-% modeled processes generate the four data types predicted by the model:
-% species abundance, population genetic diversity across species,
-% phylogenetic relationships between species, and trait distributions
-% across species.}
-% \label{fig:mod}
-% \end{figure}
-
 
 \section{Proposed Research}\label{proposed-research}
 
@@ -408,22 +391,22 @@ US-China: Soltis; Amazonia: Guralnick and Owens; Atlantic Forest:
 Carnaval and Hickerson).
 
 \textbf{R2} To build a joint model for the multiple dimensions of
-biodiversity---species abundance, genetic, and functional. This model
-will build off on-going work (by Rominger, Hickerson, Harmon, and Chase)
-to combine macroecological predictions with phylo- and population
-genetic measures. Model fitting methods based on ABC and machine
-learning will be created. The entire modeling framework will be released
-as open source software.
+biodiversity---species abundance, phylo- and population genetic, and
+functional. This model will build off on-going work (by Rominger,
+Hickerson, Harmon, and Chase) to combine macroecological predictions
+with phylo- and population genetic measures. Model fitting methods
+based on ABC and machine learning will be created. The entire modeling
+framework will be released as open source software.
 
 \textbf{R3} To test this joint model across five diverse systems for
-which data has been synthesized by the informatics platform from
-existing DoB sampling efforts and selective resampling. We have included
-in this proposal five mature DoB projects whose data represent
-compelling unit tests for our informatics platform, and whose underlying
-evolution and ecology will test the generality of our model. We have
-identified data types (e.g.~abundance, genetic and/or trait data) where
-new targeted sampling within these projects will greatly improve our
-ability to test our model and document the raw diversity of life.
+which data has been synthesized by the informatics platform. We have
+included in this proposal five mature DoB projects whose data
+represent compelling unit tests for our informatics platform, and
+whose underlying evolution and ecology will test the generality of our
+model. We have identified data types (e.g.~abundance, genetic and/or
+trait data) where new targeted sampling within these projects will
+greatly improve our ability to test our model and document the raw
+diversity of life.
 
 The modeling approach we develop in \textbf{R2} allows us to address
 five hypotheses central to ecology and evolution at an unprecedented
@@ -450,52 +433,42 @@ immigration-driven, respectively.}\label{fig:hyp}}
 {\includegraphics[width=0.7\textwidth]{../fig_hyp.pdf}}
 \end{figure}
 
-% \begin{figure}[htbp]
-% \centering
-% \includegraphics[width=0.7\textwidth]{../fig_hyp.pdf}
-% \caption{Correlations between inferred parameters (see Table 3) of our
-% model under the assumption that our five hypotheses are true.}
-% \label{fig:hyp}
-% \end{figure}
-
 \textbf{H1: Isolation fosters diversification.} This has long been
-assumed, documented empirically \cite{Losos2000-xp,Wagner2014-qm}, and
-demonstrated theoretically \cite{Rosindell2011-od}. However, it remains
-to be assessed whether isolation is key to the striking examples of
-endemism and radiation at the species, genetic, and functional levels,
-or if it is only secondary to other processes such as strong ecological
-interactions. Looking across systems, this hypothesis predicts a
-negative correlation between estimated immigration ($\nu$) and
-speciation ($\lambda$; Fig \ref{fig:hyp}).
+assumed, documented for specific systems \cite{Losos2000-xp,
+  Wagner2014-qm, Rosindell2011-od}. However, it remains to be assessed
+how key isolation is to the striking examples of endemism and
+radiation at the phylogenetic, genetic, and functional levels, and
+whether other processes such as strong ecological interactions are
+also drivers (see H3). Looking across systems, H1 predicts a negative
+correlation between estimated immigration ($\nu$) and speciation
+($\lambda$; Fig \ref{fig:hyp}).
 
 \textbf{H2: Environmentally-driven speciation is important across
   systems, but depends on intrinsic dispersal ability of taxa.}
 Whether environmental gradients can promote diversification remains an
 open debate \cite{Mittelbach2007-ui, Ogden2002-jb, Rundle2005-ll}. Our
-model can test whether including interactions between traits and
-environments is necessary to predict patterns of species abundance,
-phylo- and population genetic diversity, and trait
-distributions. After accounting for the effect of H1, this hypothesis
-predicts a positive correlation between estimated speciation
-($\lambda$) and the measured environmental heterogeneity of a study
-region (Fig. \ref{fig:hyp}), which we can quantify spatially and
-temporally for many studies.
+model can test whether interactions between traits and environments is
+necessary to predict patterns of species abundance, phylo- and
+population genetic diversity, and trait distributions. After
+accounting for the effect of H1, this hypothesis predicts a positive
+correlation between estimated speciation ($\lambda$) and the
+environmental heterogeneity of a study region (Fig. \ref{fig:hyp}),
+which we can measure spatially and temporally for many studies.
 
 \textbf{H3: High diversity systems result from increased strength of
-  species interactions.} This is a classic hypothesis in the
-latitudinal diversity gradient literature \cite{Pianka1966-ky} and
-questions of ecosystem complexity and stability \cite{May1973-ua,
-  Nuismer2013-wd}. If we find that high diversity systems are
-systematically better-fit by models with strong trait-based species
-interactions, this lends strong support to the hypothesis. Across all
-systems, this hypothesis predicts a positive correlation between
-diversity measured across all biodiversity dimensions and the
-magnitude of estimated trait-based competition ($\alpha_{ij}$;
-Fig. \ref{fig:hyp}).
+  species interactions.} This is a classic hypothesis about both the
+latitudinal diversity gradient \cite{Pianka1966-ky} and ecosystem
+complexity versus stability \cite{May1973-ua, Nuismer2013-wd}. If we
+find that high diversity systems are systematically better-fit by
+models with strong trait-based species interactions, this lends strong
+support to the hypothesis. Looking across systems, this hypothesis
+predicts a positive correlation between diversity (of all biodiversity
+dimensions) and the magnitude of estimated trait-based competition
+($\alpha_{ij}$; Fig. \ref{fig:hyp}).
 
 \textbf{H4: Assembly by immigration (versus \emph{in situ} speciation)
   leads to weaker species interactions and thus more apparently
-  neutral distributions of species abundances, genetic and functional
+  neutral distributions of species abundances, genetic, and functional
   diversity}.  If high diversity systems are the result of strong
 species interactions, do these interactions arise more readily in
 communities assembled by immigration or \emph{in situ} speciation? We
@@ -506,23 +479,23 @@ draw from pools of the best, often most generalist, colonists and thus
 appear effectively neutral. Thus, this hypothesis predicts a negative
 correlation between inferred immigration and the magnitude of
 parameters capturing purely non-neutral processes (i.e.~trait-mediated
-interactions, both species-species {[}$\alpha_{ij}${]} and
-species-environment {[}$r${]}; Fig.  \ref{fig:hyp}).
+interactions, both species-environment {[}$\rho${]} and
+species-species {[}$\alpha_{ij}${]}; Fig.  \ref{fig:hyp}).
 
 \textbf{H5: Most systems have not reached an equilibrium in
-  diversity.}  Thus historical contingencies are critical for
-understanding contemporary diversity. We posit that the mechanistic
+  diversity.}  Thus historical contingencies are critical to
+contemporary diversity patterns. We posit that the mechanistic
 importance of the previous four hypotheses is heightened by systems
-being out of equilibrium. For systems in equilibrium, dynamical
-processes can no longer be inferred, or their effect size will be
-diminished \cite{Rabosky2009-gs}. The time to equilibrium, and whether
-or not our model has reached it, is something we can quantify. We can
-then continue running the model until equilibrium is reached. Across
-systems we predict discrepancies between observed diversity across all
-dimensions and the modeled equilibrium diversity
-(Fig. \ref{fig:hyp}). Whether this discrepancy is toward higher or
-lower observed diversity than equilibrium yields interesting
-additional and complementary hypotheses that we will explore:
+being out of equilibrium. For systems in equilibrium, the effect size
+of dynamical processes will be diminished \cite{Rabosky2009-gs}. The
+time to equilibrium, and whether or not our model has reached it, is
+something we can quantify. We can then continue running the model
+until equilibrium is reached. Across systems we predict discrepancies
+between observed diversity and the eventual diversity reached at the
+modeled equilibrium (Fig. \ref{fig:hyp}). Whether this discrepancy is
+toward higher or lower observed diversity than equilibrium yields
+interesting additional and complementary hypotheses that we will
+explore:
 
 \begin{adjustwidth}{2.5em}{0pt}
 \hspace{1.5em}\textbf{H5a} Systems constrained by immigration \citep[e.g.~arthropod
@@ -546,8 +519,8 @@ barriers to creating this multi-dimensional biodiversity platform for
 projects that span biogeographic regions as part of an NSF-funded
 workshop on DoB data management (PIs Carnaval and Soltis). These
 barriers are (1) allowing for short-term data entry and long-term data
-storage and sharing; (2) integrating abundance, phylogeny, and
-environmental data into a data management environment primarily
+storage and sharing; (2) integrating abundance, sequence, phylogeny,
+and environmental data into a data management environment primarily
 intended for specimen data; and (3) educating researchers about proper
 data management. This last barrier we address with substantial
 curriculum development, detailed in section
@@ -579,7 +552,7 @@ multiple users. To this end, Rominger, working with undergraduate
 students in focused mentoring associations, has developed an open source
 R package \cite{Rominger2016-mq} that facilitates the entry and error
 checking of data using R and Google Sheets, either through custom
-scripts or a graphical user interface (GUI) built with Shiny
+scripts or a graphical user interface built with Shiny
 \cite{RStudio_Inc2013-bt}. This approach will be extended to facilitate
 the entry of data types including abundances, phylogenies, and raw
 sequence data. For data that cannot be easily recorded in tabular format
@@ -598,7 +571,7 @@ Solutions for open, long-term curation of all data types of interest to
 our project have already been pioneered. The missing component is
 practical software to link data from these repositories for a given
 project. We will fill this gap by making our extended R package work not
-only with Google Sheets, local files and Amazon RDS, but with the APIs
+only with Google Sheets, local files, and Amazon RDS, but with the APIs
 of data aggregators and curators. We will specifically target GBIF for
 occurrence data \cite{Flemons2007-eg}, NCBI for sequence data
 \cite{Sherry2001-pn,Benson1993-jf}, OpenTree for phylogenies
@@ -613,11 +586,11 @@ developed package. We will use these existing resources to create
 high-level functions that facilitate the publishing of data from Google
 Sheets, local files, and Amazon RDS to these open repositories. Again,
 this functionality will be made available both as a standalone R package
-and as a Shiny GUI.
+and as a Shiny graphical user interface.
 
 To facilitate our specific data needs for testing our model of
 eco-evolutionary community assembly, we need to be able to compile data
-by three potentially overlapping ways, each targeting specific shared
+in three potentially overlapping ways, each targeting specific shared
 attributes across disparate data types to merge---or ``join''---relevant
 information from all data types. We will use a PostgreSQL
 \cite{Douglas2003-zs} backend in our R package to allow for these three
@@ -640,32 +613,32 @@ joins:
 
 These joins will allow us to, for example, find all taxa that have
 abundance data at a given location, query their trait values which may
-have been measured from specimens at different locations, compile a
-phylogenetic tree for those taxa and the files containing their raw
+have been measured from specimens at different locations, and compile
+a phylogenetic tree for those taxa and the files containing their raw
 sequence data.
 
 \subsubsection{Collection of new data} \label{collection-of-new-data}
 
 Because we selected five mature DoB projects, many data resources are
-already available; our new data collection efforts will focus on
-filling specific gaps (see Table \ref{tab:data}) to ensure continuity
-of data types across projects. Two classes of traits, relevant across
-the tree of life, will be compiled for all taxa: (1) body size and
-metabolic rate \cite{brown2004, price2012}; and (2) environmental
-preference. Environmental preferences are not functional traits unto
-themselves, but they summarize the influence of many such traits on
-ecology, biogeography, and evolution \cite{elith2009}. We will be
-quantify environmental preference using species distribution models,
-novel applications of which have been put forward by the members of
-our team \citep[e.g.;][]{Owens2017-ja, Carnaval2014-je,
+already available; therefore our new data collection efforts will
+focus on filling specific gaps (see Table \ref{tab:data}) to ensure
+continuity of data types across projects. Two classes of traits,
+relevant across the tree of life, will be compiled for all taxa: (1)
+body size and metabolic rate \cite{brown2004, price2012}; and (2)
+environmental preference. Environmental preferences are not functional
+traits unto themselves, but they summarize the influence of many such
+traits on ecology, biogeography, and evolution \cite{elith2009}. We
+will be quantify environmental preference using species distribution
+models, novel applications of which have been put forward by the
+members of our team \citep[e.g.;][]{Owens2017-ja, Carnaval2014-je,
   Carnaval2008-og}.
 
 \begin{table}[!htb]
 \newcolumntype{M}[1]{>{\raggedright\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\definecolor{yes}{rgb}{0.63, 0.73, 0.9}
+\definecolor{yes}{rgb}{0.48, 0.6, 0.8}
 \definecolor{no}{rgb}{0.9, 0.79, 0.63}
-\definecolor{planned}{gray}{0}
+\definecolor{planned}{rgb}{0.5, 0.05, 0.05}
 
 \newcommand{\yes}{\cellcolor{yes}}
 \newcommand{\no}{\cellcolor{no}}
@@ -686,7 +659,7 @@ our team \citep[e.g.;][]{Owens2017-ja, Carnaval2014-je,
     \cline{3-8}
     Palau & Invertebrates & \yes & \yes & \yes & \planned & \yes & \yes \\
     \cline{3-8}
-    Palau & Fish & \no & \yes & \yes & \yes & \yes & \yes \\
+    Palau & Fish & \yes & \yes & \yes & \yes & \yes & \yes \\
     \cline{3-8}
     Atlantic Forest & Plants & \yes & \yes & \planned & \planned & \planned & \yes \\
     \cline{3-8}
@@ -694,7 +667,7 @@ our team \citep[e.g.;][]{Owens2017-ja, Carnaval2014-je,
     \cline{3-8}
     Atlantic Forest & Herpetofauna & \planned & \yes & \yes & \planned & \yes & \yes \\
     \cline{3-8}
-    Amazonia & Plants & \planned & \yes & \yes & \yes & \planned & \yes \\
+    Amazonia & Plants & \yes & \yes & \yes & \yes & \planned & \yes \\
     \cline{3-8}
     Amazonia & Birds & \planned & \yes & \yes & \yes & \yes & \yes \\
     \cline{3-8}
@@ -704,14 +677,14 @@ our team \citep[e.g.;][]{Owens2017-ja, Carnaval2014-je,
 
   \caption{Data resources available, and planned collection of new
     data. \textbf{\textcolor{yes!50!Blue}{Blue cells}} correspond to
-    sufficient existing data, \textbf{\textcolor{no!60!Mahogany}{tan cells}}
-    correspond to data gaps that will not be filled, \textbf{black cells}
-    represent new data to be collected by this proposed project.}
+    sufficient existing data; \textbf{\textcolor{planned}{red
+        cells}} represent new data to be collected by this proposed
+    project.}
 \label{tab:data}
 \end{table}
 
-Gap-filling field work will complement our abundance, phylogenetic and
-population genetic, and trait sampling. Our primary source for
+Gap-filling field work will complement our abundance, phylogenetic,
+and population genetic, and trait sampling. Our primary source for
 choosing sites will be the experience of the PIs and the knowledge of
 local collaborators, supplemented with information from satellite
 images and remote sensing data. Below we detail the status of specific
@@ -776,7 +749,7 @@ barcode data for all available and yet unsequenced individuals of the
 target groups, following standard protocols \cite{che2012,
   Krehenwinkel2017-zk, bi2018chloroplast}. For the amphibian data, a
 strong barcoding effort is in place already.  The primary information
-gap in the Atlantic Forest are curated data quantifying abundance. To
+gaps in the Atlantic Forest are curated data quantifying abundance. To
 address this, we will (1) merge and curate abundance inventories
 already available for plants (a table of abundance of woody plants is
 available for $> 20$ sites), butterflies (7 sites, available through
@@ -808,21 +781,21 @@ by co-PI Robinson and collaborator Loiselle.
 \textbf{US-China}. The US-China project focuses on levels of diversity
 across the classic eastern Asia-eastern North American floristic
 disjunction. Detailed sampling of plant genetic, trait, and
-phylogenetic diversity and soil and leaf microbial diversity at six
-sites in eastern North America and 5 sites in China will be available
-through the funded project; remote sensing data for 3 of the 6 North
-American sites are also currently available. Each site is linked to
-abundance data from NEON (US) and CERN (China) plots, with additional
-abundance data for woody plants provided by the Forest Inventory and
-Analysis Program (US Forest Service) and partner organizations in
-China. We seek to collect sequence data for plant species and soil
-microbes at four additional NEON sites in North America to improve
-sampling across the large geographic and climatic gradient and to add
-remote sensing data for additional NEON sites as the data become
-publicly available. We will add trait data from publicly available
-sources for any new species sampled. Occurrence data will be obtained
-from public databases. Phylogenies for 30 plant genera from across the
-disjunction will be completed in the funded project.
+phylogenetic diversity at six sites in eastern North America and 5
+sites in China will be available through the funded project; remote
+sensing data for 3 of the 6 North American sites are also currently
+available. Each site is linked to abundance data from NEON (US) and
+CERN (China) plots, with additional abundance data for woody plants
+provided by the Forest Inventory and Analysis Program (US Forest
+Service) and partner organizations in China. We seek to collect
+sequence data for plant species and soil microbes at four additional
+NEON sites in North America to improve sampling across the large
+geographic and climatic gradient and to add remote sensing data for
+additional NEON sites as the data become publicly available. We will
+add trait data from publicly available sources for any new species
+sampled. Occurrence data will be obtained from public
+databases. Phylogenies for 30 plant genera from across the disjunction
+will be completed in the funded project.
 
 
 \subsubsection{Theory development}\label{theory-development}
@@ -837,10 +810,10 @@ collaborators Harmon and Chase will extend this work further to
 complete objective \textbf{R2} by including the process of speciation
 \cite{Rosindell2010-gq}, the evolution of traits, and ecological
 interactions (between species, and between species and their
-environments) based on those traits. This work as initiated by a
+environments) based on those traits. This work was initiated by a
 working group between these researchers at the Santa Fe Institute, and
 will continue to be independently fostered by working groups among
-these researchers at German Centre for Integrative Biodiversity
+these researchers at the German Centre for Integrative Biodiversity
 Research.
 
 Trait evolution will follow a continuous Markov process (see Table
@@ -884,9 +857,9 @@ community fluctuate due to a birth-death-immigration process
 \cite{Kendall1948-ri}, modified under the non-neutral models to
 include trait-based interactions (Table \ref{tab:mod}).  The
 fluctuating local population determines the effective population size
-$N_e$ which, together with mutation rate, determines the distribution
-of genetic diversities across species. Across long time scales new
-species arise and traits evolve.
+$N_e$ which, together with mutation rate and colonization event
+timings, determines the distribution of genetic diversities across
+species. Across long time scales new species arise and traits evolve.
 
 We will use well known mathematical results for assembly by birth,
 death, and immigration \cite{Haegeman2017-kf,Kendall1948-ri} to
@@ -961,15 +934,15 @@ improve fit.
 
 Fitting our model to real data from diverse ecosystems will allow us
 to understand whether a common set of mechanisms can be seen as
-universally driving patterns of diversity (\textbf{R3}). By evaluating
-how the best-fit model parameters vary across taxa and systems we will
-test our five main hypotheses. Figure 3 shows how correlations among
-estimated parameter values and between parameter values and intrinsic
-characteristics of regions and taxa can confirm or refute our
-hypotheses. Critically, not all systems are represented by the same
-taxa, nor do they cover the same spatial scale. In searching for
-correlations between model parameters we are prepared to
-account for random effects of taxon and study.
+universally driving patterns of diversity (\textbf{R3}). We will test
+our five main hypotheses by evaluating how the best-fit model
+parameters vary across taxa and systems. Figure \ref{fig:hyp} shows
+how correlations among estimated parameter values and between
+parameter values and intrinsic characteristics of regions and taxa can
+confirm or refute our hypotheses. Critically, not all systems are
+represented by the same taxa, nor do they cover the same spatial
+scale. In searching for correlations between model parameters we are
+prepared to account for random effects of taxon and project.
 
 Evaluating whether our five biogeographic regions have achieved
 equilibrium (\textbf{H5}) requires added analytical nuance. For that,
@@ -1022,9 +995,9 @@ proposed research.
 To make this educational material as broadly accessible as possible,
 the biodiversity data science curriculum will be developed as a
 massive open online course (MOOC) hosted on the Santa Fe Institute's
-online education platform. This content will be licensed under
-creative commons. The creation of this course will leverage existing
-infrastructure and expertise at the Santa Fe Institute.
+online education platform. This content will be distributed under a
+Creative Commons license. The creation of this course will leverage
+existing infrastructure and expertise at the Santa Fe Institute.
 
 \subsection{Open source software for science and conservation}\label{open-source-software}
 
@@ -1047,16 +1020,16 @@ specifications, model fitting, and model selection, will be made
 available as an open source R package.  With this modeling power at
 hand, users will be able to gain completely new insights into their
 study systems. Whether or not communities are assembled primarily by
-in situ evolution or ex situ immigration strongly determines their
-response to anthropogenic pressures \cite{Karp2012-is} and optimal
-conservation management \cite{Barnosky2001-zy}. We will highlight this
-importance in an open access applications manuscript which we will
-seek to publish in a conservation-oriented journal. We will
-specifically seek publicity for this work such that its message, and
-our open source software, can be brought to the attention of
-conservation practitioners.
+{\it in situ} evolution or {\it ex situ} immigration strongly
+determines their response to anthropogenic pressures
+\cite{Karp2012-is} and optimal conservation management
+\cite{Barnosky2001-zy}. We will highlight this importance in an open
+access applications manuscript which we will seek to publish in a
+conservation-oriented journal. We will specifically seek publicity for
+this work such that its message, and our open source software, can be
+brought to the attention of conservation practitioners.
 
-\subsection{Adding to the tree of life} \label{adding-to-the-tree-of-life}
+\subsection{Adding to the Tree of Life} \label{adding-to-the-tree-of-life}
 
 Expanding the Tree of Life is a community-wide priority, as we ought
 to document diversity before human actions erase some of the most
@@ -1104,68 +1077,71 @@ In the table below we detail the timeline for major milestones of our project.
 
 We have assembled a diverse team of researchers from theoreticians to
 systematists to field ecologists. Rominger will lead coordinating
-efforts across institutions remotely, and by bringing together the
-group for logistical and synthesis meetings at the Santa Fe
-Institute. Remote meetings will be held at least monthly to discuss
-progress on independent tasks and on synthesis. Our larger group will
-be organized into three core teams: (1) systems data gathering team,
-(2) informatics team, and (3) theory development team. The
-\textbf{systems team} will compile existing and collect new data from
-our five biogeographic regions: Rominger and Gillespie (Hawaii),
-Dawson (Palau), Carnaval and Michelangeli (Atlantic Forest), Owens and
-Robinson (Amazonia), and Owens and Soltis (US-China)), along with
-their collaborators. The \textbf{informatics team} (Rominger,
-Guralnick, and Owens with support for a scientific programmer to be
-housed at University of Florida) will coordinate with both the systems
-and theory teams to build an informatics platform that satisfies both
-groups' needs. The informatics team will also be responsible for
-developing the biodiversity data science training curriculum in
-collaboration with the Carpentries and the Santa Fe Institute Office of
-Education. The \textbf{theory team} (Rominger, Hickerson, and
-collaborators Chase and Harmon) will build our novel modeling
-framework that jointly predicts species abundances, population and
-phylo-genetics, and trait distributions. They will also coordinate
-with the systems team to ensure the model's biological realism.
+efforts across institutions both remotely and during logistical and
+synthesis meetings at the Santa Fe Institute. Remote meetings will be
+held at least monthly to discuss progress on independent tasks and on
+synthesis. Our larger group will be organized into three core teams:
+(1) systems data gathering team, (2) informatics team, and (3) theory
+development team. The \textbf{systems team} will compile existing and
+collect new data from our five biogeographic regions: Rominger and
+Gillespie (Hawaii), Dawson (Palau), Carnaval and Michelangeli
+(Atlantic Forest), Owens and Robinson (Amazonia), and Owens and Soltis
+(US-China)), along with their collaborators. The \textbf{informatics
+  team} (Rominger, Guralnick, and Owens with support for a scientific
+programmer to be housed at University of Florida) will coordinate with
+both the systems and theory teams to build an informatics platform
+that satisfies both groups' needs. The informatics team will also be
+responsible for developing the biodiversity data science training
+curriculum in collaboration with the Carpentries and the Santa Fe
+Institute Office of Education. The \textbf{theory team} (Rominger,
+Hickerson, and collaborators Chase and Harmon) will build our novel
+modeling framework that jointly predicts species abundances, phylo-
+and population genetics, and trait distributions. They will also
+coordinate with the systems team to ensure the model's biological
+realism.
 
 \section{Results from Prior Funding} \label{results-from-prior-funding}
 
 \paragraph{Carnaval.} DEB 1343578: Dimensions US-BIOTA-Sao Paulo: A
-multidisciplinary framework for biodiversity prediction in the Brazilian
-Atlantic forest hotspot; 2013--2018; \$1,991,480. \textbf{Intellectual
-Merits.} The team is developing models of spatial patterns of
-biodiversity in the megadiverse Atlantic Forest of Brazil. They generate
-and integrate: (1) environmental data from novel remote sensing-based
-datasets and paleoenvironmental archives; (2) locality, phylogenetic,
-genomic, and trait data from plants and animals; and (3) new methods
-that incorporate big genomic and environmental data into predictive
-models. The project has generated $80+$ publications to date,
-including high impact journals
-\cite{Do_Amaral2016-bi,Prates2016-at,Prates2016-gr,Maestri2016-bp,Zamborlini_Saiter2016-zu,Montade2016-wl,Bernal2016-pd,Bustamante2016-qt,Gu2017-oz}.
-\textbf{Broader Impacts}. The project contributed to training of five
-Ph.D.~students (2 female, 2 Latin-American), 11 M.Sc. students (10
-female, 9 underrepresented minority), 7 undergraduates (all female/URM),
-and 5 post-docs (2 female, 2 Latin-American).
+multidisciplinary framework for biodiversity prediction in the
+Brazilian Atlantic forest hotspot; 2013--2018;
+\$1,991,480. \textbf{Intellectual Merits.} The team is developing
+models of spatial patterns of biodiversity in the megadiverse Atlantic
+Forest of Brazil. They generate and integrate: (1) environmental data
+from novel remote sensing-based datasets and paleoenvironmental
+archives; (2) locality, phylogenetic, genomic, and trait data from
+plants and animals; and (3) new methods that incorporate big genomic
+and environmental data into predictive models. The project has
+generated $80+$ publications to date, including high impact journals
+\cite{Do_Amaral2016-bi, Prates2016-at, Prates2016-gr, Maestri2016-bp,
+  Zamborlini_Saiter2016-zu, Montade2016-wl, Bernal2016-pd,
+  Bustamante2016-qt, Gu2017-oz}.  \textbf{Broader Impacts}. The
+project contributed to training of five Ph.D.~students (2 female, 2
+Latin-American), 11 M.Sc. students (10 female, 9 underrepresented
+minority), 7 undergraduates (all female/URM), and 5 post-docs (2
+female, 2 Latin-American).
 
-\paragraph{Dawson.} OCE-1243970: Dimensions: Collaborative Research: Do
-parallel patterns arise from parallel processes; 2013--2017 plus 1-yr no
-cost extension; \$1,369,982\textbf{. Intellectual Merit}: We
+\paragraph{Dawson.} OCE-1243970: Dimensions: Collaborative Research:
+Do parallel patterns arise from parallel processes; 2013--2017 plus
+1-yr no cost extension; \$1,369,982\textbf{. Intellectual Merit}: We
 investigated taxonomic, genetic, and functional diversity of microbes
-and macrobiota in widespread yet under-explored marine lake ecosystems,
-which present independent eco-evolutionary ``natural experiments.'' We
-are revealing how parallel processes in space and time influence
-genetic, phylogenetic, and functional diversity. We surveyed over 14000
-points across 15 lakes in Palau, sampling 9000 specimens, and barcoding
-1350 of invertebrates and algae. We are finding (1) marine lakes conform
-with island theory, (2) microbes and macrobiota can share similar
-biogeographic patterns, (3) abiotic lake dynamics are driven by regional
-climate and local factors, and (4) life-history and chance strongly
-influence population structure in invertebrates. Currently available
-research products:
-\cite{Dawson2016-zv,Dawson2016-aq,Meyerhof2016-fs,Schiebelhut2017-bp,Swift2016-iq,Wilson2017-en}.
-Published datasets: BCO-DMO Project 2238 datasets. \textbf{Broader
-Impacts}: 4 female graduate students (incl. 1 Pacific islander), 2
-female lab techs, and a citizen scientist trained on the project.
-Advised local resource managers on conservation.
+and macrobiota in widespread yet under-explored marine lake
+ecosystems, which present independent eco-evolutionary ``natural
+experiments.'' We are revealing how parallel processes in space and
+time influence genetic, phylogenetic, and functional diversity. We
+surveyed over 14000 points across 15 lakes in Palau, sampling 9000
+specimens, and barcoding of $\approx 1200$ invertebrates and algae. We
+are finding (1) marine lakes conform with island theory, (2) microbes
+and macrobiota can share similar biogeographic patterns, (3) abiotic
+lake dynamics are driven by regional climate and local factors, and
+(4) life-history and chance strongly influence population structure in
+invertebrates. Currently available research products:
+\cite{Dawson2016-zv, Dawson2016-aq, Meyerhof2016-fs,
+  Schiebelhut2017-bp, Swift2016-iq, Wilson2017-en}.  Published
+datasets: BCO-DMO Project 2238 datasets. \textbf{Broader Impacts}: 4
+female graduate students (incl. 1 Pacific islander), 2 female lab
+techs, and a citizen scientist trained on the project.  Advised local
+resource managers on conservation.
 
 \paragraph{Gillespie.} DEB 1241253 Dimensions: A community level approach
 to understanding speciation in Hawaiian lineages. 2013--2019;
