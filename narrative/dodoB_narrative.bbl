@@ -149,12 +149,6 @@ Barnosky, A.D. \emph{et~al.} (2012) Approaching a state shift in earth/'s
   biosphere.
 \newblock \emph{Nature} 486, 52--58
 
-\bibitem{Guralnick2017-xb}
-Guralnick, R. \emph{et~al.} (2017) Humboldt core -- toward a standardized
-  capture of biological inventories for biodiversity monitoring, modeling and
-  assessment.
-\newblock \emph{Ecography}
-
 \bibitem{Overcast_undated-op}
 Overcast, I. \emph{et~al.} An integrated model of population genetics and
   community ecology.
@@ -209,6 +203,11 @@ Tuomisto, H. \emph{et~al.} (2003) Dispersal, environment, and floristic
 Schrider, D.R. and Kern, A.D. (2018) Supervised machine learning for population
   genetics: A new paradigm.
 \newblock \emph{Trends Genet.}
+
+\bibitem{Overcast2017-mf}
+Overcast, I. \emph{et~al.} (2017) Strategies for improving approximate bayesian
+  computation tests for synchronous diversification.
+\newblock \emph{BMC Evol. Biol.} 17, 203
 
 \bibitem{R_Development_Core2013-ze}
 R~Development~Core, T. (2013) R: A language and environment for statistical
@@ -268,6 +267,12 @@ Rominger, A.J. \emph{et~al.} (2015) Community assembly on isolated islands:
 Gillespie, R.G. and Baldwin, B.G. (2010) Island biogeography of remote
   archipelagoes.
 \newblock \emph{The theory of island biogeography revisited} , 358--387
+
+\bibitem{Guralnick2017-xb}
+Guralnick, R. \emph{et~al.} (2017) Humboldt core -- toward a standardized
+  capture of biological inventories for biodiversity monitoring, modeling and
+  assessment.
+\newblock \emph{Ecography}
 
 \bibitem{Rominger2016-mq}
 Rominger, A.J. and Huang, E.G. (2016).
@@ -420,15 +425,15 @@ Kendall, D.G. (1948) On some modes of population growth leading to r. a.
   fisher's logarithmic series distribution.
 \newblock \emph{Biometrika} 35, 6--15
 
-\bibitem{Rosenberg2002-vb}
-Rosenberg, N.A. and Nordborg, M. (2002) Genealogical trees, coalescent theory
-  and the analysis of genetic polymorphisms.
-\newblock \emph{Nat. Rev. Genet.} 3, 380--390
-
 \bibitem{waples2007}
 Waples, R.S. and Yokota, M. (2007) Temporal estimates of effective population
   size in species with overlapping generations.
 \newblock \emph{Genetics} 175, 219--233
+
+\bibitem{Rosenberg2002-vb}
+Rosenberg, N.A. and Nordborg, M. (2002) Genealogical trees, coalescent theory
+  and the analysis of genetic polymorphisms.
+\newblock \emph{Nat. Rev. Genet.} 3, 380--390
 
 \bibitem{Kelleher2016-an}
 Kelleher, J. \emph{et~al.} (2016) Efficient coalescent simulation and
@@ -444,10 +449,6 @@ Anderson, J. \emph{et~al.} (2014) The more, the merrier: the blessing of
 Breiman, L. (2001) Statistical modeling: The two cultures (with comments and a
   rejoinder by the author).
 \newblock \emph{Stat. Sci.} 16, 199--231
-
-\bibitem{Chan2018-qh}
-Chan, J. \emph{et~al.} (2018) A {Likelihood-Free} inference framework for
-  population genetic data using exchangeable neural networks
 
 \bibitem{Tingley2009-kt}
 Tingley, M.W. and Beissinger, S.R. (2009) Detecting range shifts from
@@ -632,11 +633,6 @@ Yilmaz, P. \emph{et~al.} (2011) Minimum information about a marker gene
   sequence ({MIMARKS}) and minimum information about any (x) sequence ({MIxS})
   specifications.
 \newblock \emph{Nat. Biotechnol.} 29, 415
-
-\bibitem{Overcast2017-mf}
-Overcast, I. \emph{et~al.} (2017) Strategies for improving approximate bayesian
-  computation tests for synchronous diversification.
-\newblock \emph{BMC Evol. Biol.} 17, 203
 
 \bibitem{Xue2017-hn}
 Xue, A.T. and Hickerson, M.J. (2017) {Multi‐DICE}: {R} package for

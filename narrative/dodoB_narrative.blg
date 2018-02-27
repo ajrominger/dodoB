@@ -1,52 +1,51 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: dodoB_narrative.aux
 The style file: grant.bst
 Database file #1: dodoB.bib.bib
 Warning--empty year in Rominger_undated-cw
 Warning--empty year in Overcast_undated-op
-Warning--empty note in Chan2018-qh
 Warning--empty note in May2017-ji
 Warning--empty journal in Dawson2016-aq
-You've used 149 entries,
+You've used 148 entries,
             2349 wiz_defined-function locations,
-            1427 strings with 37854 characters,
-and the built_in function-call counts, 47224 in all, are:
-= -- 3943
-> -- 1226
+            1422 strings with 37612 characters,
+and the built_in function-call counts, 47030 in all, are:
+= -- 3929
+> -- 1217
 < -- 3
-+ -- 550
-- -- 275
-* -- 2628
-:= -- 6026
++ -- 546
+- -- 273
+* -- 2617
+:= -- 5997
 add.period$ -- 151
-call.type$ -- 149
-change.case$ -- 144
+call.type$ -- 148
+change.case$ -- 143
 chr.to.int$ -- 0
-cite$ -- 154
-duplicate$ -- 4579
-empty$ -- 4773
-format.name$ -- 401
-if$ -- 10562
+cite$ -- 152
+duplicate$ -- 4559
+empty$ -- 4757
+format.name$ -- 398
+if$ -- 10521
 int.to.chr$ -- 0
-int.to.str$ -- 149
-missing$ -- 1094
-newline$ -- 600
-num.names$ -- 149
-pop$ -- 1502
+int.to.str$ -- 148
+missing$ -- 1090
+newline$ -- 597
+num.names$ -- 148
+pop$ -- 1495
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 786
+skip$ -- 782
 stack$ -- 0
 substring$ -- 2715
-swap$ -- 2695
+swap$ -- 2684
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 356
-width$ -- 152
-write$ -- 1453
-(There were 5 warnings)
+warning$ -- 4
+while$ -- 355
+width$ -- 151
+write$ -- 1446
+(There were 4 warnings)
