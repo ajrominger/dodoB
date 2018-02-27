@@ -12,11 +12,11 @@
 \usepackage{textcomp}
 \usepackage[hidelinks]{hyperref}
 \usepackage[numbers, sort&compress]{natbib}
-% \usepackage{fancyhdr}
-% \pagestyle{fancy}
-% \fancyhead{}
-% \fancyhead[LO,LE]{Rominger, {\it et al.}}
-% \fancyhead[RO,RE]{Data Management Plan}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LO,LE]{Rominger, {\it et al.}}
+\fancyhead[RO,RE]{Data Management Plan}
 
 \usepackage[T1]{fontenc}
 \usepackage{titling}
@@ -88,7 +88,7 @@
 
 \begin{document}
 \maketitle
-% \thispagestyle{fancy} 
+\thispagestyle{fancy} 
 \vspace{-6em}
 
 \section{Products of the research} 
@@ -97,14 +97,14 @@ The data will consist of organismal specimen collections (including arthropods, 
 
 \paragraph{Physical specimens:} 
 
-For the sequencing of voucher specimens we expect to collect on the order of 100 specimens in each of the groups of arthropods, marine invertebrates, herpetofauna, and plants.  Collection and processing of specimens and tissue samples will follow standard techniques, and be conducted with other uses of the specimens in mind.  For plants, silica gel samples will be made of every collection. In vertebrates, skin swabs and blood samples will be collected whenever appropriate and possible. Co-PIs Carnaval, Robinson, and collaborators Michelangeli, Lyra, Rodrigues and Freitas have or will obtain necessary collecting permits and will ensure that all US participants obtain authorization to work and collect before traveling abroad. Any collected vouchers will be deposited in local collections, while sub-samples of tissues or DNA extractions may be temporarily transported to the Co-PIs laboratories, for sequencing. Material Transfer Agreements will be established when needed. Animal specimen handling will follow respective Institutional Animal Care and Use Committees.
+For the sequencing of voucher specimens we expect to collect on the order of 100 specimens in each of the groups of arthropods, marine invertebrates, herpetofauna, and plants.  Collection and processing of specimens and tissue samples will follow standard techniques, and be conducted with other uses of the specimens in mind.  For plants, silica gel samples will be made of every collection. In vertebrates, skin swabs and blood samples will be collected whenever appropriate and possible. Co-PIs Carnaval, Robinson, Gillespie, Dawson, and collaborators Michelangeli, Lyra, Rodrigues, and Freitas have or will obtain necessary collecting permits and will ensure that all US participants obtain authorization to work and collect before traveling abroad. Any collected vouchers will be deposited in local collections, while sub-samples of tissues or DNA extractions may be temporarily transported to the Co-PIs laboratories, for sequencing. Material Transfer Agreements will be established when needed. For each project involving vertebrates, animal specimen handling will follow respective Institutional Animal Care and Use Committees.
 
 \paragraph{Digitized specimen data:} 
 All specimen data will be digitized and initially stored locally in our database and curated permanently in open repositories e.g. iDigBio and GBIF.  
 
 \paragraph{Genetic data:} 
 
-We have developed next generation, Illumina sequencing-based tools for rapid, cost efficient and large scale analysis of communities. We will generate sequence information voucher specimens of arthropods, marine invertebrates, herpetofauna, and plants. Markers used will vary depending on taxa.
+We have developed next generation, Illumina sequencing-based tools for rapid, cost efficient and large scale analysis of communities. We will generate sequence information for voucher specimens of arthropods, marine invertebrates, herpetofauna, and plants. Markers used will vary depending on taxon, but will be consistent within taxa across the projects. 
 
 \paragraph{Abundance data:}
 
@@ -124,7 +124,7 @@ The proposed {\tt R} packages will be fully documented according to published st
 
 \section{Standards to be used, metadata format, and content}
 
-Specimen data will be digitized to conform to the Darwin Core (DwC; Wieczorek et al. 2012) metadata standard.  Metadata associated with nucleic acid sequences will conform to the MI(X)S standards for metagenomes and marker genes respectively, which extends the typical INSDC format used by sequence repositories.   We plan to use common standards for phylogenetic trees, e.g, Newick and NeXML.  
+Specimen data will be digitized to conform to the Darwin Core (DwC; Wieczorek et al. 2012) metadata standard.  Metadata associated with nucleic acid sequences will conform to the MIxS standards for metagenomes and marker genes, which extends the typical INSDC format used by sequence repositories.   We plan to use common standards for phylogenetic trees, e.g, Newick and NeXML.  
 
 We will deposit new trait data into TraitBase, utilizing trait ontologies.  We will store trait data assembled from other resources (e.g. TRY for plant functional traits). Humboldt Core will serve as standard for reporting inventory-based abundance data.   Metadata concerning the environments sampled will conform to the Environmental Ontology (EnvO) standards.  
 
@@ -132,7 +132,7 @@ Raw collections data, abundances, and derived, analyzed datasets, with their met
 
 \section{Data access, dissemination, and preservation:} 
 
-All data produced during this research will be freely available to the public and released to repositories as quickly as data curation practices allow; we anticipate no sensitive or confidential data.   Our informatics platform is a key means for disseminating standardized data that can joined as needed.  The platform will be accessible via an R package and Shiny app.
+All data produced during this research will be freely available to the public and released to repositories as quickly as data curation practices allow; we anticipate no sensitive or confidential data.   Our informatics platform is a key means for disseminating standardized data that can be joined as needed.  The platform will be accessible via an R package and Shiny app.
 
 Voucher specimens will be archived at the Bishop Museum in Honolulu, the Essig Museum at UC Berkeley, the California Academy of Sciences, and the Smithsonian Institution. These physical specimens will be matched with genetic barcode accession numbers to facilitate future work.
 
@@ -146,10 +146,10 @@ All sequence data will be deposited in the NCBI Genbank, with raw sequence reads
 
 \paragraph{Software:}
 
-All software and other code will be publicly available through GitHub and distributed under a GPL (GNU General Public Library) license immediately upon completion.
+All software and other code will be publicly available through GitHub and distributed under a GNU General Public License (GPL) immediately upon completion.
 
 \section{Re-use policies and PI responsibilities} 
-We will respect all licenses on products used in modeling and will not use data products that are not conformant to community standards and practices.  We will always license data to assure broadest re-use, with aspirations to CC-0 licenses but often with CC-BY as well.  The lead PI Rominger will decided issues related to data use and policy and consult especially with team members who are familiar with the social, legal and technical challenges to assure data conform to FAIR principles.
+We will respect all licenses on products used in modeling and will not use data products that are not conformant to community standards and practices.  We will always license data to assure broadest re-use, with aspirations to CC-0 licenses but often with CC-BY as well.  The lead PI Rominger will decided issues related to data use and policy and consult especially with team members who are familiar with the social, legal, and technical challenges to assure data conform to FAIR principles.
 
 \section{Tracking and annotation} 
 
