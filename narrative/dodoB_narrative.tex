@@ -124,14 +124,14 @@ about the complex, multi-dimensional processes underlying biodiversity
 patterns. \textbf{We propose to fill these two gaps by (1) building an
   open source platform to manage and query diverse streams of
   biodiversity-relevant information, and (2) developing a stochastic
-  model of biodiversity that incorporates a range of mechanistic
-  processes that jointly predicts species abundance, trait
-  distributions, phylogenetic structure, and population genetic
-  diversity.}  Through this model we will be able to quantify the
-contribution of three distinct classes of processes to the structure
-of biodiversity across disparate systems: (i) Stochastic immigration,
-speciation, and extinction, (ii) species interactions with the biotic
-and abiotic environment, and (iii) historical contingencies.
+  model of biodiversity that incorporates a range of mechanisms that
+  jointly predicts species abundance, trait distributions,
+  phylogenetic structure, and population genetic diversity.}  Through
+this model we will be able to quantify the contribution of three
+distinct classes of processes to the structure of biodiversity across
+disparate systems: (i) Stochastic immigration, speciation, and
+extinction, (ii) species interactions with the biotic and abiotic
+environment, and (iii) historical contingencies.
 
 \textbf{To understand the universality of these processes, we will (3)
   test our model across five biogeographic systems for which
@@ -182,26 +182,27 @@ rigorous framework where their universality can be evaluated.
 Current eco-evolutionary theory is not up to this task. Quantitative
 models inspired by the Equilibrium Theory of Island Biogeography
 \cite{MacArthur1967-ux} and the Neutral Theory of Biodiversity and
-Biogeography \cite{Hubbell2001-dx}, for instance, place emphasis on the
-equilibrium between rates of immigration, speciation, and extinction. Yet
-while empirical work on islands and latitudinal gradients have
-demonstrated the significant role of immigration, speciation, and
-extinction histories \cite{Gillespie2004-zv, Owens2017-ja}, these neutral
-theories of eco-evolutionary drift are limited. For example,
+Biogeography \cite{Hubbell2001-dx}, for instance, place emphasis on
+the equilibrium between rates of immigration, speciation, and
+extinction. However, while empirical work on islands and latitudinal
+gradients have demonstrated the significant role of immigration,
+speciation, and extinction histories \cite{Gillespie2004-zv,
+  Owens2017-ja}, these neutral theories of eco-evolutionary drift are
+limited limited in scope and predictive power. For example,
 interspecific interactions and the environment have been shown
 empirically to be important in determining patterns such as the
 latitudinal diversity gradient
-\cite{Janzen1967-fk,Mittelbach2007-ui,Pianka1966-ky}. Moreover, neutral
-drift theories do not accurately capture temporal dynamics
-\cite{Ricklefs2006-tn, Chisholm2014-mu} and ecological interactions have
-been flagged as potential drivers of the fast dynamics observed in real
-communities that neutral theories fail to accurately predict
+\cite{Janzen1967-fk,Mittelbach2007-ui,Pianka1966-ky}. Moreover,
+neutral drift theories do not accurately capture temporal dynamics
+\cite{Ricklefs2006-tn, Chisholm2014-mu} and ecological interactions
+have been flagged as potential drivers of the fast dynamics observed
+in real communities that neutral theories fail to accurately predict
 \cite{Rosindell2015-gp,Ricklefs2006-tn}. Conversely, models based on
 detailed ecological interactions may be so over-parameterized as to
 render them uninterpretable \cite{Rosindell2012-pm}. Current theory
-fails to predict multiple dimensions of biodiversity, which can lead to
-very different processes producing indistinguishable predictions for
-single dimensions
+fails to predict multiple dimensions of biodiversity, which can lead
+to very different processes producing indistinguishable predictions
+for single dimensions
 \cite{Chisholm2010-yg,McGill2003-sf,McGill2007-zd,Leibold2017-jv}.
 
 The perspectives from both neutral-like eco-evolutionary drift and
@@ -230,18 +231,19 @@ mechanisms across five systems.
 \subsubsection{Informatic platform for dimensions of biodiversity
 data}\label{informatic-platform-for-dimensions-of-biodiversity-data}
 
-Large scale, system-based collaborative projects - including many funded
-by the DoB program - often have difficulty making the best use of the
-volume and types of data they generate. Data management strategies are
-usually developed independently by each team or laboratory, often
-varying across teams. Members of collaborating laboratories frequently
-work on their own locally stored datasets, with local domain expertise
-and data administration and curation. Smaller or more narrowly focused
-projects can afford to absorb the administrative and cognitive overhead
-of fully integrating data platforms and management. However, larger
-projects - both in scope and scale - are significantly negatively
-impacted by this. The problem is especially acute for projects with
-multiple PIs distributed across the globe (e.g.~US-China and US-Brazil
+Large scale, system-based collaborative projects - including many
+funded by the DoB program - often have difficulty making the best use
+of the volume and types of data they generate. Data management
+strategies are usually developed independently by each team or
+laboratory, often varying across teams. Members of collaborating
+laboratories frequently work on their own locally stored datasets,
+with local domain expertise and data administration and
+curation. Smaller or more narrowly focused projects can afford to
+absorb the administrative and cognitive overhead of fully integrating
+data platforms and management. However, larger projects - both in
+scope and scale - are significantly negatively impacted by this. The
+challenge is especially acute for projects with multiple PIs
+distributed across the globe (e.g.~US-China and US-Brazil
 partnerships), as well as those generating vast quantities of
 heterogeneous data.
 
@@ -250,8 +252,8 @@ data independently. Initiatives such as iDigBio, GBIF, Dryad, GloBI,
 and NCBI provide some facility for depositing, cataloguing, and
 accessing occurrence records, sequence, morphological and ecological
 data, and have been extensively used by the many DoB projects funded
-to date.  However, the linkages that would crucially support
-re-integration of these data are in nearly all cases missing, which
+to date.  However, in nearly all cases the linkages that would
+crucially support re-integration of these data are missing, which
 limits the ability to derive broader understanding across
 projects. While all the mentioned repositories are essential services
 to the global scientific community, they each have internal missions
@@ -268,9 +270,11 @@ projects and other biodiversity research teams should be able to ask
 questions about the multivariate forces that influence multiple
 systems; thus there is a critical need to assure that datasets
 interoperate. \textbf{We will build a proof-of-concept platform that
-  supports storing data for broadest possible use and also enhances
-  modeling frameworks, such as those discussed below}. The outcome
-will be a scalable model knowledgebase that crosscuts and connects all
+  supports storing data and linking its shared attributes for broadest
+  possible use and also enhances modeling frameworks, such as those
+  discussed below}. The outcome will be a scalable, open source
+knowledgebase composed of relational databases in the Cloud, open
+repositories, and functional linkages that crosscut and connect all
 dimensions of spatiotemporal biodiversity data.
 
 \subsubsection{Theory to integrate dimensions of
@@ -831,11 +835,11 @@ data, and trait distributions.
 
 Because available population genetic data across many individuals in a
 community are limited to extremely reduced genomic regions, and often
-mined for synonymous SNPs, we will initially model neutral mutations;
-however, demography will be driven by potentially non-neutral ecological
-dynamics, and thus population genetic measures, despite being
-mutationally neutral, may still be far from the predicted drift-mutation
-balance of a constant population.
+mined for synonymous SNPs, we will initially model neutral mutations.
+However, demography will be driven by potentially non-neutral
+ecological dynamics, and thus population genetic measures, despite
+being mutationally neutral, may still be far from the predicted
+drift-mutation balance of a constant population.
 
 Analytical solutions to such models might be available, but only in
 the asymptotic limit of equilibrium \citep[e.g.,][]{Etienne2007-we,
