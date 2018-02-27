@@ -191,42 +191,42 @@ speciation, and extinction histories \cite{Gillespie2004-zv,
 limited limited in scope and predictive power. For example,
 interspecific interactions and the environment have been shown
 empirically to be important in determining patterns such as the
-latitudinal diversity gradient
-\cite{Janzen1967-fk,Mittelbach2007-ui,Pianka1966-ky}. Moreover,
-neutral drift theories do not accurately capture temporal dynamics
-\cite{Ricklefs2006-tn, Chisholm2014-mu} and ecological interactions
-have been flagged as potential drivers of the fast dynamics observed
-in real communities that neutral theories fail to accurately predict
-\cite{Rosindell2015-gp,Ricklefs2006-tn}. Conversely, models based on
-detailed ecological interactions may be so over-parameterized as to
-render them uninterpretable \cite{Rosindell2012-pm}. Current theory
-fails to predict multiple dimensions of biodiversity, which can lead
-to very different processes producing indistinguishable predictions
-for single dimensions
-\cite{Chisholm2010-yg,McGill2003-sf,McGill2007-zd,Leibold2017-jv}.
+latitudinal diversity gradient \cite{Janzen1967-fk, Mittelbach2007-ui,
+  Pianka1966-ky}. Moreover, neutral drift theories do not accurately
+capture temporal dynamics \cite{Ricklefs2006-tn, Chisholm2014-mu} and
+ecological interactions have been flagged as potential drivers of the
+fast dynamics observed in real communities that neutral theories fail
+to accurately predict \cite{Rosindell2015-gp,
+  Ricklefs2006-tn}. Conversely, models based on detailed ecological
+interactions may be so over-parameterized as to render them
+uninterpretable \cite{Rosindell2012-pm}. Current theory fails to
+predict multiple dimensions of biodiversity, which can lead to very
+different processes producing indistinguishable predictions for single
+dimensions \cite{Chisholm2010-yg, McGill2003-sf, McGill2007-zd,
+  Leibold2017-jv}.
 
 The perspectives from both neutral-like eco-evolutionary drift and
 ecological interaction-based coexistence and diversification are
-typically applied in equilibrium
-\cite{Rominger_undated-cw,Etienne2007-we,Chesson2000-uc,Hubbell2001-dx}.
-However, the history underlying a system at any given point might be
-such that the system is far from an equilibrium state --something
-increasingly relevant in the Anthropocene \cite{Barnosky2012-qz}.
-Examples of this non-equilibrium hysteresis include island biogeography
-\cite{Ricklefs2001-af}, differences in otherwise similar biomes across
-East Asia and North America \cite{Qian2005-co,Yu2017-cc}, and
-communities assembled from refugia after glacial retreat
-\cite{Carnaval2008-og,Carnaval2009-vd,Burbrink2016-nu}.
+typically applied in equilibrium \cite{Rominger_undated-cw,
+  Etienne2007-we, Chesson2000-uc, Hubbell2001-dx}.  However, empirical
+examples abound of non-equilibrium hysteresis. They include island
+biogeography \cite{Ricklefs2001-af}, differences in otherwise similar
+biomes across East Asia and North America
+\cite{Qian2005-co,Yu2017-cc}, and communities assembled from refugia
+after glacial retreat \cite{Carnaval2008-og, Carnaval2009-vd,
+  Burbrink2016-nu}. The potential for real systems to be far from
+equilibrium---increasingly increasingly relevant in the Anthropocene
+\cite{Barnosky2012-qz}---neccesitates a modeling frameworks that can
+evaluate non-equilibrium states.
 
-Evaluating how general these observations are across systems, and how
-they influence species-level, phylogenetic, population genetic, and
-functional trait diversity, necessitates the collection, management, and
-analysis of multi-dimensional data on (i) the abundance of species, (ii)
-their geo-referenced occurrences, (iii) ecologically-relevant traits, (iv)
-phylogenetic and population genetic histories, and (v) the environment.
-We propose to build such informatic synthesis tools and to
-quantitatively compare the support for these different hypothesized
-mechanisms across five systems.
+Evaluating the generality of eco-evolutionary mechanisms, from
+classical equilibrial models to non-equilibrium dynamics, in driving
+patterns of species-level, phylogenetic, population genetic, and
+functional trait diversity, necessitates advances in informatics and
+theory.  We must collect, manage, and analyses multi-dimensional data
+on (i) the abundance of species, (ii) their geo-referenced
+occurrences, (iii) ecologically-relevant traits, (iv) phylogenetic and
+population genetic histories, and (v) the environment.
 
 \subsubsection{Informatic platform for dimensions of biodiversity
 data}\label{informatic-platform-for-dimensions-of-biodiversity-data}
@@ -808,17 +808,17 @@ Hickerson and his PhD student Overcast, who will be funded on the
 current proposal, have extended the island-mainland neutral model
 \cite{Rosindell2013-di} to include coalescence of alleles under
 neutral mutation, thereby allowing joint predictions of species
-abundance distributions (SADs) and population genetic metrics such as
-genetic diversity ($\pi$). Rominger, Hickerson, Overcast, and
-collaborators Harmon and Chase will extend this work further to
-complete objective \textbf{R2} by including the process of speciation
-\cite{Rosindell2010-gq}, the evolution of traits, and ecological
-interactions (between species, and between species and their
-environments) based on those traits. This work was initiated by a
-working group between these researchers at the Santa Fe Institute, and
-will continue to be independently fostered by working groups among
-these researchers at the German Centre for Integrative Biodiversity
-Research.
+abundance distributions (SADs) and aggregate population genetic
+metrics such as genetic diversity ($\pi$) across all
+species. Rominger, Hickerson, Overcast, and collaborators Harmon and
+Chase will extend this work further to complete objective \textbf{R2}
+by including the process of speciation \cite{Rosindell2010-gq}, the
+evolution of traits, and ecological interactions (between species, and
+between species and their environments) based on those traits. This
+work was initiated by a working group between these researchers at the
+Santa Fe Institute, and will continue to be independently fostered by
+working groups among these researchers at the German Centre for
+Integrative Biodiversity Research.
 
 Trait evolution will follow a continuous Markov process (see Table
 \ref{tab:mod}) for continuous traits, and be thresholded
@@ -860,10 +860,11 @@ pool, approximately constant. Abundances in the much smaller local
 community fluctuate due to a birth-death-immigration process
 \cite{Kendall1948-ri}, modified under the non-neutral models to
 include trait-based interactions (Table \ref{tab:mod}).  The
-fluctuating local population determines the effective population size
-$N_e$ which, together with mutation rate and colonization event
-timings, determines the distribution of genetic diversities across
-species. Across long time scales new species arise and traits evolve.
+fluctuating local population determines the temporal trajectory of
+effective population sizes $N_e$ which, together with mutation rate
+and colonization event timings, determine the distribution of genetic
+diversities across species. Across long time scales new species arise
+and traits evolve.
 
 We will use well known mathematical results for assembly by birth,
 death, and immigration \cite{Haegeman2017-kf,Kendall1948-ri} to
