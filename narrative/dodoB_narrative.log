@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 FEB 2018 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 FEB 2018 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -726,11 +726,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1238.
 Here is how much of TeX's memory you used:
  10377 strings out of 492995
  156576 string characters out of 6132704
- 308447 words of memory out of 5000000
+ 308469 words of memory out of 5000000
  13616 multiletter control sequences out of 15000+600000
  21357 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,69p,1277b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,69p,1278b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Hickerson2014-za} has been referenced but do
 es not exist, replaced by a fixed one
 
@@ -1043,7 +1043,7 @@ xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on dodoB_narrative.pdf (15 pages, 1844278 bytes).
+Output written on dodoB_narrative.pdf (15 pages, 1844281 bytes).
 PDF statistics:
  637 PDF objects out of 1000 (max. 8388607)
  557 compressed objects within 6 object streams
